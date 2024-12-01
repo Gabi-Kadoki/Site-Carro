@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Button Interaction</title>
+  <link rel="stylesheet" href="referencia.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <button onclick="updateContent('diagnostic')">
+        <span class="box">MOTOR</span>
+      </button>
+      <button onclick="updateContent('engine')">
+        <span class="box" class="box">TRANSMISSÂO</span>
+      </button>
+      <button onclick="updateContent('tires')">
+        <span class="box">EMBREAGEM</span>
+      </button>
+      <button onclick="updateContent('oil')">
+        <span class="box">SISTEMA DE SUSPENSÃO</span>
+      </button>
+      <button onclick="updateContent('freios')">
+        <span class="box">SISTEMA DE FREIOS</span>
+      </button>
+      <button onclick="updateContent('direcao')">
+        <span class="box">SISTEMA DE DIREÇÃO</span>
+      </button>
+      <button onclick="updateContent('arrefecimento')">
+        <span class="box">SISTEMA DE ARREFECIMENTO</span>
+      </button>
+      <button onclick="updateContent('eletrico')">
+        <span class="box">SISTEMA ELÉTRICO</span>
+      </button>
+    </div>
+    <div class="content">
+      <img id="content-image" src="../pecasMotor/motor.jpg" alt="Service Image">
+      <p id="content-text">Select a service to see details!</p>
+    </div>
+  </div>
+  <script src="referencia.js"></script>
+</body>
+</html>
