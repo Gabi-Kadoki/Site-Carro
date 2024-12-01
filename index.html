@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Prático de Carros</title>
+    <link rel="shortcut icon" href="./img/iconeNavegador.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/styles.css">
+    <!--Biblioteca Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Icone de Loading inicio -->
+    <!--<div class="spinner">
+            <div class="spinner1"></div>
+        </div>  -->
+    <!--É necessário com o JavaScrip para removê-lo assim que o conteúdo for totalmente carregado -->
+    <!-- Icone de Loading fim -->
+
+    <!-- Navbar inicio -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <h2><i class="fa fa-car" style="margin-right: 10px;"></i> Guia Prático de Carros</h2>
+        </a>
+        <button class="navbar-toggler" onclick="toggleMenu()">&#9776;</button>
+        <div class="navbar-links" id="navbar-links">
+            <a href="index.html" class="nav-item"><span>Início</span></a>
+            <a href="sobre.html" class="nav-item">Sobre</a>
+            <a href="guia.html" class="nav-item">Guia</a>
+            <a href="FAQs.html" class="nav-item">FAQs</a>
+        </div>
+    </nav>    
+    <!-- Navbar fim -->
+    
+    <!-- Cabeçalho início -->
+    <header style="background-image: url(./img/capa.jpg); padding: 20px; text-align: center; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); position: relative; height: 100vh; background-size: cover; background-position: center;">
+        <!-- Sobreposição escura -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.658);"></div>
+        
+        <div style="position: relative; z-index: 1; color: #fff; padding-top: 150px;">
+            <h1 style="font-size: 3.5em; font-family: 'Arial', sans-serif; margin-bottom: 20px;">
+                Mecânica Básica
+            </h1>
+            <p style="font-size: 1.3em; margin-top: 10px; max-width: 700px; margin: 0 auto;">
+                Aprenda os fundamentos da mecânica e faça escolhas mais conscientes para o seu carro.
+            </p>
+        </div>
+    
+        <section style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 20px; padding: 40px 20px; z-index: 1; position: relative;">
+            <div style="flex: 1; min-width: 300px; max-width: 400px;">
+                <p style="font-size: 1.1em; color: #fff; line-height: 1.6; text-align: justify; text-indent: 1.3rem;">
+                    Este site foi desenvolvido com o propósito de oferecer um guia abrangente e acessível para aqueles que desejam compreender os fundamentos da mecânica automotiva. Nosso objetivo é proporcionar informações essenciais sobre o funcionamento básico dos veículos, permitindo que até mesmo iniciantes possam adquirir o conhecimento necessário para tomar decisões mais informadas.
+                </p>
+                <p style="font-size: 1.1em; color: #fff; line-height: 1.6; text-align: justify; text-indent: 1.3rem;">
+                    Ao navegar por nossas páginas, você terá a oportunidade de explorar a função e a importância das principais peças de um carro, conhecer práticas recomendadas para garantir sua segurança e descobrir dicas úteis para manter o veículo em perfeito estado.
+                </p>
+            </div>
+    
+            <div style="flex: 1; min-width: 300px; max-width: 400px;">
+                <p style="font-size: 1.1em; color: #fff; line-height: 1.6; text-align: justify; text-indent: 1.3rem;">
+                    Além disso, contamos com um espaço dedicado à interação com a comunidade, onde você poderá esclarecer dúvidas, compartilhar experiências e aprender com outros entusiastas e especialistas da área.
+                </p>
+            </div>
+        </section>
+    </header>    
+    <!-- Cabeçalho fim -->
+
+    <section style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 20px; padding: 20px; background-color: #ffffff;">
+        <div>
+            <img src="./img/giphy_360ºcarro.webp" alt="gif de carro girando 360°">
+        </div>
+    </section>
+    
+    <section id="partes-funcoes" style="padding: 120px; background-color: #f9f9f9;">
+    <p style="font-size: 1.1em; color: #555; line-height: 1.6; text-align: justify;">
+        Caso queira aprender de forma dinâmica e visual
+    </p>
+    <div class="btn-conteiner">
+        <a class="btn-content" href="guia.html">
+            <span class="btn-title">GUIA</span>
+            <span class="icon-arrow">
+                <svg width="66px" height="43px" viewBox="0 0 66 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <g id="arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <path id="arrow-icon-one" d="M40.1543933,3.89485454 L43.9763149,0.139296592 C44.1708311,-0.0518420739 44.4826329,-0.0518571125 44.6771675,0.139262789 L65.6916134,20.7848311 C66.0855801,21.1718824 66.0911863,21.8050225 65.704135,22.1989893 C65.7000188,22.2031791 65.6958657,22.2073326 65.6916762,22.2114492 L44.677098,42.8607841 C44.4825957,43.0519059 44.1708242,43.0519358 43.9762853,42.8608513 L40.1545186,39.1069479 C39.9575152,38.9134427 39.9546793,38.5968729 40.1481845,38.3998695 C40.1502893,38.3977268 40.1524132,38.395603 40.1545562,38.3934985 L56.9937789,21.8567812 C57.1908028,21.6632968 57.193672,21.3467273 57.0001876,21.1497035 C56.9980647,21.1475418 56.9959223,21.1453995 56.9937605,21.1432767 L40.1545208,4.60825197 C39.9574869,4.41477773 39.9546013,4.09820839 40.1480756,3.90117456 C40.1501626,3.89904911 40.1522686,3.89694235 40.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+                        <path id="arrow-icon-two" d="M20.1543933,3.89485454 L23.9763149,0.139296592 C24.1708311,-0.0518420739 24.4826329,-0.0518571125 24.6771675,0.139262789 L45.6916134,20.7848311 C46.0855801,21.1718824 46.0911863,21.8050225 45.704135,22.1989893 C45.7000188,22.2031791 45.6958657,22.2073326 45.6916762,22.2114492 L24.677098,42.8607841 C24.4825957,43.0519059 24.1708242,43.0519358 23.9762853,42.8608513 L20.1545186,39.1069479 C19.9575152,38.9134427 19.9546793,38.5968729 20.1481845,38.3998695 C20.1502893,38.3977268 20.1524132,38.395603 20.1545562,38.3934985 L36.9937789,21.8567812 C37.1908028,21.6632968 37.193672,21.3467273 37.0001876,21.1497035 C36.9980647,21.1475418 36.9959223,21.1453995 36.9937605,21.1432767 L20.1545208,4.60825197 C19.9574869,4.41477773 19.9546013,4.09820839 20.1480756,3.90117456 C20.1501626,3.89904911 20.1522686,3.89694235 20.1543933,3.89485454 Z" fill="#FFFFFF"></path>
+                        <path id="arrow-icon-three" d="M0.154393339,3.89485454 L3.97631488,0.139296592 C4.17083111,-0.0518420739 4.48263286,-0.0518571125 4.67716753,0.139262789 L25.6916134,20.7848311 C26.0855801,21.1718824 26.0911863,21.8050225 25.704135,22.1989893 C25.7000188,22.2031791 25.6958657,22.2073326 25.6916762,22.2114492 L4.67709797,42.8607841 C4.48259567,43.0519059 4.17082418,43.0519358 3.97628526,42.8608513 L0.154518591,39.1069479 C-0.0424848215,38.9134427 -0.0453206733,38.5968729 0.148184538,38.3998695 C0.150289256,38.3977268 0.152413239,38.395603 0.154556228,38.3934985 L16.9937789,21.8567812 C17.1908028,21.6632968 17.193672,21.3467273 17.0001876,21.1497035 C16.9980647,21.1475418 16.9959223,21.1453995 16.9937605,21.1432767 L0.15452076,4.60825197 C-0.0425130651,4.41477773 -0.0453986756,4.09820839 0.148075568,3.90117456 C0.150162624,3.89904911 0.152268631,3.89694235 0.154393339,3.89485454 Z" fill="#FFFFFF"></path>
+                    </g>
+                </svg>
+            </span> 
+        </a>
+    </div>
+    <h2 style="font-size: 1.8em; color: #333;">Partes e Funções Básicas do Carro</h2>
+    <p style="font-size: 1.1em; color: #555; line-height: 1.6; text-align: justify; text-indent: 2em;">
+        Todo carro é composto por diversos sistemas essenciais que trabalham juntos para garantir seu funcionamento. Alguns dos mais importantes incluem o motor, responsável por transformar combustível em energia, e o sistema de freios, que garante segurança ao parar o veículo.
+    </p>
+    <p style="font-size: 1.1em; color: #555; line-height: 1.6; text-align: justify; text-indent: 2em;">
+        Também é fundamental conhecer o sistema de suspensão, que proporciona conforto e estabilidade, e os componentes elétricos, como bateria e faróis.
+    </p>
+
+    <div style="display: flex; justify-content: space-between;">
+        <!-- Parte Externa e Interna (lado esquerdo) -->
+        <div style="width: 48%; padding-right: 2%;">
+            <section>
+                <h3>Parte Externa</h3>
+                <ul style="font-size: 1.1em; color: #555; line-height: 1.6; padding-left: 20px;">
+                    <li><strong>Carroceria:</strong> Estrutura principal do carro, que protege os ocupantes e os componentes internos.</li>
+                    <li><strong>Capô:</strong> Tampa que protege o motor e outros componentes do compartimento do motor.</li>
+                    <li><strong>Portas:</strong> Permitem o acesso ao interior do veículo.</li>
+                    <li><strong>Para-choques:</strong> Absorvem impactos em caso de colisão.</li>
+                    <li><strong>Faróis e lanternas:</strong> Iluminam o caminho e sinalizam as manobras do veículo.</li>
+                    <li><strong>Para-brisa e vidros laterais:</strong> Proporcionam visibilidade ao motorista e passageiros.</li>
+                    <li><strong>Retrovisores:</strong> Permitem ao motorista ter visão de áreas que não estão diretamente à frente do veículo.</li>
+                    <li><strong>Rodas e pneus:</strong> Entram em contato com o solo, permitindo a movimentação do carro.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>Parte Interna</h3>
+                <ul style="font-size: 1.1em; color: #555; line-height: 1.6; padding-left: 20px;">
+                    <li><strong>Painel:</strong> Contém os instrumentos que fornecem informações ao motorista, como velocímetro, conta-giros e indicadores de combustível.</li>
+                    <li><strong>Volante:</strong> Controla a direção do veículo.</li>
+                    <li><strong>Pedais:</strong> Controlam a aceleração, freio e embreagem (em carros manuais).</li>
+                    <li><strong>Bancos:</strong> Oferecem assentos para o motorista e passageiros.</li>
+                    <li><strong>Cintos de segurança:</strong> Protegem os ocupantes em caso de colisão.</li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Parte Mecânica (lado direito) -->
+        <div style="width: 48%;">
+            <section>
+                <h3>Parte Mecânica</h3>
+                <ul style="font-size: 1.1em; color: #555; line-height: 1.6; padding-left: 20px;">
+                    <li><strong>Motor:</strong> Coração do carro, converte energia química do combustível em energia mecânica para mover o veículo.</li>
+                    <li><strong>Transmissão:</strong> Transmite a potência do motor para as rodas.</li>
+                    <li><strong>Embreagem:</strong> Permite conectar e desconectar o motor da transmissão em carros manuais.</li>
+                    <li><strong>Sistema de suspensão:</strong> Amortece os impactos e garante o conforto ao dirigir.</li>
+                    <li><strong>Sistema de freios:</strong> Permite parar o veículo.</li>
+                    <li><strong>Sistema de direção:</strong> Permite controlar a direção do veículo.</li>
+                    <li><strong>Sistema de arrefecimento:</strong> Mantém o motor na temperatura ideal de funcionamento.</li>
+                    <li><strong>Sistema elétrico:</strong> Fornece energia para os diversos componentes eletrônicos do veículo.</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</section>
+    
+    <section id="seguranca-manutencao" style="padding: 20px; background-color: #ffffff;">
+        <h2 style="font-size: 1.8em; color: #333;">Dicas de Segurança e Manutenção</h2>
+    
+        <p style="font-size: 1.1rem; color: #555; line-height: 1.8; text-align: justify; text-indent: 2em;">
+            A segurança ao dirigir começa com a manutenção regular do veículo. Verifique frequentemente os níveis de óleo, água e fluido de freio. Inspecione também os pneus quanto à calibragem e desgaste. Além disso, mantenha os faróis e lanternas funcionando corretamente, e nunca negligencie a revisão periódica em oficinas confiáveis.
+        </p>
+    
+        <p style="font-size: 1.1rem; color: #555; line-height: 1.8; text-align: justify; text-indent: 2em;">
+            A manutenção preventiva de veículos é essencial para garantir seu bom desempenho, segurança e durabilidade. Realizar cuidados periódicos no carro não apenas evita quebras inesperadas, mas também proporciona uma experiência de direção mais tranquila e econômica.
+        </p>
+    
+        <ul style="font-size: 1.1rem; color: #555; line-height: 1.8; padding-left: 2em;">
+            <li>Revisões periódicas conforme o manual do proprietário.</li>
+            <li>Verificação regular dos fluidos essenciais (óleo, arrefecimento, fluido de freio, etc.).</li>
+            <li>Manutenção da pressão dos pneus e inspeção do alinhamento e balanceamento.</li>
+            <li>Inspeção e troca das pastilhas e discos de freio quando necessário.</li>
+            <li>Cuidado com a bateria, mantendo os terminais limpos e monitorando a carga.</li>
+            <li>Troca de filtros (de ar, combustível e óleo) conforme recomendação do fabricante.</li>
+        </ul>
+    
+        <p style="font-size: 1.1rem; color: #555; line-height: 1.8; text-align: justify; text-indent: 2em;">
+            Além desses cuidados, a substituição das correias e tensores do motor, quando apresentarem sinais de desgaste, é essencial para evitar falhas mecânicas graves. A inspeção visual periódica desses componentes pode identificar problemas antes que se tornem críticos.
+        </p>
+    
+        <p style="font-size: 1.1rem; color: #555; line-height: 1.8; text-align: justify; text-indent: 2em;">
+            Portanto, a manutenção preventiva é um conjunto de cuidados que, quando seguidos com atenção, garantem o funcionamento eficiente do veículo e previnem falhas que possam gerar custos inesperados ou até mesmo colocar em risco a segurança dos ocupantes.
+        </p>
+    
+        <p style="font-size: 1.1rem; color: #555; line-height: 1.8; text-align: justify; text-indent: 2em;">
+            A segurança na direção vai além da manutenção do veículo. Práticas como o uso do cinto de segurança, a observância dos limites de velocidade e a atenção total ao volante são fundamentais para evitar acidentes. O cinto de segurança, por exemplo, salva vidas ao reduzir o impacto de um acidente e evitar que os ocupantes sejam ejetados do veículo, sendo uma medida essencial em qualquer trajeto.
+        </p>
+    
+        <p style="font-size: 1.1rem; color: #555; line-height: 1.8; text-align: justify; text-indent: 2em;">
+            Dirigir com responsabilidade também significa respeitar os limites de velocidade. Exceder os limites de velocidade aumenta consideravelmente o risco de acidentes, principalmente em condições adversas, como chuva ou em estradas desconhecidas. Além disso, manter uma distância segura do veículo à frente garante tempo suficiente para reagir a imprevistos e aumentar a segurança durante a condução.
+        </p>
+    
+        <p style="font-size: 1.1rem; color: #555; line-height: 1.8; text-align: justify; text-indent: 2em;">
+            Evitar distrações é outro ponto crucial. O uso do celular ao volante, por exemplo, retira a atenção do motorista da estrada e está diretamente ligado à alta taxa de acidentes. Outras atividades, como comer ou beber, também comprometem a concentração. A atenção total ao volante é uma medida simples, mas extremamente eficaz para garantir a segurança no trânsito.
+        </p>
+    
+        <p style="font-size: 1.1rem; color: #555; line-height: 1.8; text-align: justify; text-indent: 2em;">
+            Além disso, não dirigir sob o efeito de álcool ou drogas é uma regra fundamental. Essas substâncias comprometem gravemente o julgamento e as reações, aumentando exponencialmente o risco de acidentes. Para viagens longas, é recomendado fazer pausas regulares para evitar a fadiga, que também prejudica a capacidade de tomar decisões rápidas e seguras.
+        </p>
+    
+        <p style="font-size: 1.1rem; color: #555; line-height: 1.8; text-align: justify; text-indent: 2em;">
+            Em resumo, a segurança na direção é um conjunto de ações que envolvem tanto o cuidado com o veículo quanto a adoção de comportamentos responsáveis ao volante. Manter o carro em boas condições e adotar práticas como o uso do cinto de segurança, a manutenção regular e a atenção plena ao dirigir são passos essenciais para garantir viagens seguras e tranquilos no trânsito.
+        </p>
+    </section>
+    
+     
+    <section id="verificar-compra" style="padding: 20px; background-color: #f9f9f9;">
+        <h2 style="font-size: 1.8em; color: #333;">O que Verificar ao Comprar um Carro?</h2>
+        <p style="font-size: 1.1em; color: #555; line-height: 1.6; text-align: justify; text-indent: 2em;">
+            Comprar um carro exige atenção a detalhes importantes. Para garantir que você está fazendo um bom negócio, é fundamental verificar o estado geral do veículo, incluindo a pintura, lataria e pneus. Além disso, é essencial fazer uma inspeção mais profunda, verificando o motor, o sistema de freios, a suspensão e os componentes elétricos. Teste os faróis, vidros e o ar-condicionado para garantir que tudo esteja funcionando corretamente.
+        </p>
+        <p style="font-size: 1.1em; color: #555; line-height: 1.6; text-align: justify; text-indent: 2em;">
+            Outro ponto importante é o histórico do carro. Solicite um relatório completo sobre acidentes, roubos e sinistros, verifique a quilometragem e o número de proprietários. Certifique-se de que o carro tem procedência legal, sem pendências judiciais ou financeiras. Por fim, não se esqueça de conferir a documentação, como o CRLV e o Documento de Transferência de Propriedade (DDT), para garantir que tudo esteja em ordem antes de fechar o negócio.
+        </p>
+    </section>
+    
+    <!-- Footer Start -->
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Equipe</h4>
+                <p>Gabriel Capodeferro</p>
+                <p>Gabriela Kadoki</p>
+                <p>Ian da Silva</p>
+                <p>Isabela Izidorio</p>
+                <p>Wendell Fossen</p>
+            </div>
+            <div class="footer-section">
+                <h4>Projeto de aula</h4>
+                <h6>BRADWEB</h6>
+                <p>Lecionada por Ana Paula Giancoli</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">
+                &copy; <a href="#">Guia Prático de Carros</a>, All Right Reserved.
+                <br>
+                Design por Gabriel, Gabriela e Isabela
+                <br>
+                Back-End por Ian, Isabela e Wendell
+            </div>
+        </div>
+    </div>    
+    <!-- Footer End -->
+
+    <!-- Botão para voltar no topo -->
+    <a href="#" class="voltaTopo" id="voltaTopo">↑</a>
+
+    <!-- Biblioteca de JS Font Awesome-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/js/all.min.js" integrity="sha512-1JkMy1LR9bTo3psH+H4SV5bO2dFylgOy+UJhMus1zF4VEFuZVu5lsi4I6iIndE4N9p01z1554ZDcvMSjMaqCBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
