@@ -1,8 +1,8 @@
 // Data for the buttons
 const contentData = {
-    diagnostic: {
-      image: "diagnostic.jpg",
-      text: "This is a diagnostic service. We inspect your car to ensure everything is functioning correctly.",
+    motor: {
+      image: "motor.png",
+      text: "O moto é o coração do carro, é o que faz o carro andar.",
     },
     engine: {
       image: "engine.jpg",

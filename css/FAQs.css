@@ -74,7 +74,7 @@ body {
     background-color: transparent;
     border: none;
     font-size: 30px;
-    display: none; /* Escondido por padrão em telas grandes */
+    display: none;
 }
 
 /* Links de Navegação */
@@ -129,8 +129,6 @@ body {
         margin-top: 10px;
     }
 }
-
-/* Capa do site*/
 
 /* Cabeçalho principal */
 .header {
@@ -212,114 +210,81 @@ body {
 
 /* Cabeçalho fim */
 
-/* Botão Clique Aqui para ir para o guia inicio */
-.btn-conteiner {
-    display: flex;
-    justify-content: justify;
-    --color-text: #ffffff;
-    --color-background: rgb(216, 19, 36);
-    --color-outline: #AD0F1D;
-    --color-shadow: #00000080;
-    height: 30px;
-}
-  
-.btn-content {
-    display: flex;
+/* FAQs inicio */
+
+.colunas {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 20px; 
     align-items: center;
-    padding: 5px 30px;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    color: #fff;
-    background: rgb(216, 19, 36);
-    transition: 1s;
-    border-radius: 100px;
-    box-shadow: 0 0 0.2em 0 var(--color-background);
+    justify-content: center;
+    padding-top: 25px;
 }
-  
-.btn-content:hover, .btn-content:focus {
-    transition: 0.5s;
-    -webkit-animation: btn-content 1s;
-    animation: btn-content 1s;
-    outline: 0.1em solid transparent;
-    outline-offset: 0.2em;
-    box-shadow: 0 0 0.4em 0 var(--color-background);
+
+.box {
+    max-width: 600px; 
+    background-color: #fff; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.329); /* Sombra mais escura */
+    padding: 20px;
+    display: flex;
+    align-items: flex-start; 
 }
-  
-.btn-content .icon-arrow {
-    transition: 0.5s;
-    margin-right: 0px;
-    transform: scale(0.6);
+
+.media-left {
+    margin-right: 15px; 
 }
-  
-.btn-content:hover .icon-arrow {
-    transition: 0.5s;
-    margin-right: 25px;
+
+.media-left img {
+    width: 64px; 
+    height: 64px; 
 }
-  
-.icon-arrow {
-    width: 10px;
-    margin-left: 15px;
-    position: relative;
-    top: 6%;
+
+.media-content {
+    flex: 1; 
 }
-    
-/* SVG */
-#arrow-icon-one {
-    transition: 0.4s;
-    transform: translateX(-60%);
+
+.content p {
+    margin: 0; 
+    color: #1f2229;
 }
-  
-#arrow-icon-two {
-    transition: 0.5s;
-    transform: translateX(-30%);
+
+.content p strong {
+    font-size: 1.2em; 
+    color: #1f2229;
 }
-  
-.btn-content:hover #arrow-icon-three {
-    animation: color_anim 1s infinite 0.2s;
+
+.content p small {
+    color: #1f2229; 
+    margin-right: 5px; 
 }
-  
-.btn-content:hover #arrow-icon-one {
-    transform: translateX(0%);
-    animation: color_anim 1s infinite 0.6s;
+
+.level {
+    margin-top: 10px; 
+    display: flex; 
 }
-  
-.btn-content:hover #arrow-icon-two {
-    transform: translateX(0%);
-    animation: color_anim 1s infinite 0.4s;
+
+.level-item {
+    margin-right: 15px; 
+    color: rgb(171, 177, 191); 
+    cursor: pointer; 
+    transition: color 0.2s; 
 }
-  
-/* SVG animations */
-@keyframes color_anim {
-    0% {
-      fill: white;
-    }
-  
-    50% {
-      fill: var(--color-background);
-    }
-  
-    100% {
-      fill: white;
-    }
+
+.level-item:hover {
+    color: #0a85d1; 
 }
-  
-/* Button animations */
-@-webkit-keyframes btn-content {
-    0% {
-      outline: 0.2em solid var(--color-background);
-      outline-offset: 0;
-    }
-}  
-  
-@keyframes btn-content {
-    0% {
-      outline: 0.2em solid var(--color-background);
-      outline-offset: 0;
-    }
+
+.like-icon:hover {
+    color: #e0245e; 
 }
-/* Botão Clique Aqui para ir para o guia fim */
+
+.icon {
+    font-size: 1.2em; 
+} 
+/* FAQs fim */
+
+
 
 /* Footer inicio*/
 /* Estilos principais para o footer */
@@ -428,16 +393,4 @@ body {
 
 .voltaTopo:active {
     transform: scale(0.9);
-}
-
-/* Quando o botão estiver visível */
-.show {
-    display: block;
-}
-
-@media (max-width: 768px) { 
-    .car-parts-functions { 
-        flex-direction: column; /* Coloca as colunas em uma única linha */
-        gap: 20px; /* Diminui o espaçamento entre as seções */
-    }
 }

@@ -4,6 +4,7 @@
     box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura e altura */
 }
 
+
 body {
     font-family: Inter, SF Pro, Segoe UI, Roboto, Oxygen, Ubuntu, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
@@ -130,8 +131,6 @@ body {
     }
 }
 
-/* Capa do site*/
-
 /* Cabeçalho principal */
 .header {
     background-image: url('../img/capa.jpg');
@@ -212,114 +211,227 @@ body {
 
 /* Cabeçalho fim */
 
-/* Botão Clique Aqui para ir para o guia inicio */
-.btn-conteiner {
+/* Sobre inicio */
+.sobre-container {
+    padding: 60px 20px;
     display: flex;
-    justify-content: justify;
-    --color-text: #ffffff;
-    --color-background: rgb(216, 19, 36);
-    --color-outline: #AD0F1D;
-    --color-shadow: #00000080;
-    height: 30px;
-}
-  
-.btn-content {
-    display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 5px 30px;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    color: #fff;
-    background: rgb(216, 19, 36);
-    transition: 1s;
-    border-radius: 100px;
-    box-shadow: 0 0 0.2em 0 var(--color-background);
+    flex-direction: column;
 }
-  
-.btn-content:hover, .btn-content:focus {
-    transition: 0.5s;
-    -webkit-animation: btn-content 1s;
-    animation: btn-content 1s;
-    outline: 0.1em solid transparent;
-    outline-offset: 0.2em;
-    box-shadow: 0 0 0.4em 0 var(--color-background);
+
+.sobre-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    width: 100%;
 }
-  
-.btn-content .icon-arrow {
-    transition: 0.5s;
-    margin-right: 0px;
-    transform: scale(0.6);
-}
-  
-.btn-content:hover .icon-arrow {
-    transition: 0.5s;
-    margin-right: 25px;
-}
-  
-.icon-arrow {
-    width: 10px;
-    margin-left: 15px;
+
+/* Estilo para a imagem */
+.sobre-image {
     position: relative;
-    top: 6%;
+    flex: 1;
+    min-height: 400px;
+    width: 100%;
 }
-    
-/* SVG */
-#arrow-icon-one {
-    transition: 0.4s;
-    transform: translateX(-60%);
+
+.sobre-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-  
-#arrow-icon-two {
-    transition: 0.5s;
-    transform: translateX(-30%);
+
+/* Estilo para o texto */
+.sobre-text {
+    flex: 1;
+    max-width: 600px;
+    padding: 0 20px;
+    text-align: justify;
 }
-  
-.btn-content:hover #arrow-icon-three {
-    animation: color_anim 1s infinite 0.2s;
+
+.sobre-text span {
+    color: rgb(216, 19, 36);
 }
-  
-.btn-content:hover #arrow-icon-one {
-    transform: translateX(0%);
-    animation: color_anim 1s infinite 0.6s;
+
+.subheading {
+    color: rgb(216, 19, 36);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
-  
-.btn-content:hover #arrow-icon-two {
-    transform: translateX(0%);
-    animation: color_anim 1s infinite 0.4s;
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
-  
-/* SVG animations */
-@keyframes color_anim {
-    0% {
-      fill: white;
-    }
-  
-    50% {
-      fill: var(--color-background);
-    }
-  
-    100% {
-      fill: white;
-    }
+
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
 }
-  
-/* Button animations */
-@-webkit-keyframes btn-content {
-    0% {
-      outline: 0.2em solid var(--color-background);
-      outline-offset: 0;
-    }
-}  
-  
-@keyframes btn-content {
-    0% {
-      outline: 0.2em solid var(--color-background);
-      outline-offset: 0;
-    }
+
+/* Lista de itens */
+.about-list {
+    margin-bottom: 20px;
 }
-/* Botão Clique Aqui para ir para o guia fim */
+
+.about-item {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.item-text {
+    margin-left: 15px;
+}
+
+.item-text h6 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.item-text span {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.arrow {
+    margin-left: 10px;
+    font-size: 1.2rem;
+}
+
+/* Container Equipe principal */
+.team-container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.team-header h6 {
+    font-size: 18px;
+    color: rgb(216, 19, 36);
+}
+
+.team-header h1 {
+    font-size: 36px;
+    margin-top: 10px;
+}
+
+/* Layout da linha de membros */
+.team-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Estilo para cada membro */
+.team-member {
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 380px;
+}
+
+/* Efetuar o efeito hover */
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagem do membro */
+.team-image {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.team-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Overlay para o LinkedIn */
+.team-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(216, 19, 36); /* Adicione um pouco de transparência para ver o ícone */
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.7s ease, transform 0.5s ease; /* Adicione a transição de transformação de volta */
+    transform: scale(0); /* Começa com escala 0 */
+    gap: 5px;
+}
+
+.team-member:hover .team-overlay {
+    opacity: 1;
+    transform: scale(1); /* Aumenta a escala para 1 ao passar o mouse */
+}
+
+/* Estilo do botão rede sociais */
+.socials {
+    background-color: #fff;
+    color: rgb(216, 19, 36);
+    padding: 10px;
+    width: 30px; 
+    height: 30px; 
+    font-size: 20px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Mantenha a transição apenas para a cor de fundo e texto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-member .socials:hover {
+    background-color: #0e1870;
+    color: #fff;
+}
+
+
+/* Informações sobre o membro */
+.team-info {
+    padding: 15px;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1;
+    min-height: 150px;
+}
+
+/* Título dentro da team-info */
+.team-info h5 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/* Texto pequeno dentro da team-info */
+.team-info small {
+    font-size: 14px;
+    color: #777;
+}
+
+
+/* Sobre fim */
+
+
 
 /* Footer inicio*/
 /* Estilos principais para o footer */
@@ -428,16 +540,4 @@ body {
 
 .voltaTopo:active {
     transform: scale(0.9);
-}
-
-/* Quando o botão estiver visível */
-.show {
-    display: block;
-}
-
-@media (max-width: 768px) { 
-    .car-parts-functions { 
-        flex-direction: column; /* Coloca as colunas em uma única linha */
-        gap: 20px; /* Diminui o espaçamento entre as seções */
-    }
 }
