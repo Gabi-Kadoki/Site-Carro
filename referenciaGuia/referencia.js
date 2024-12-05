@@ -1,4 +1,3 @@
-// Data for the buttons
 const contentData = {
   motor: {
     image: "",
@@ -34,7 +33,7 @@ const contentData = {
   },
 };
 
-// Function to update content
+// função de updateContent
 function updateContent(service, textAlign = "justify") {
   const image = document.getElementById("content-image");
   const text = document.getElementById("content-text");
