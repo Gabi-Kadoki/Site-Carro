@@ -35,12 +35,13 @@ const contentData = {
 };
 
 // Function to update content
-function updateContent(service) {
+function updateContent(service, textAlign = "justify") {
   const image = document.getElementById("content-image");
   const text = document.getElementById("content-text");
 
   if (contentData[service]) {
     image.src = contentData[service].image;
     text.textContent = contentData[service].text;
+    text.style.textAlign = textAlign;
   }
 }
