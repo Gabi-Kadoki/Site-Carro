@@ -37,7 +37,7 @@ body {
 }
 
 .sidebar button:hover {
-  background: #2980b9#AD0F1D;
+  background: #AD0F1D;
 }
 
 .content {
@@ -50,10 +50,10 @@ body {
   padding: 20px;
 }
 
-
 #content-image {
-  width: autopx;
-  height: 500px;
+  width: 100%;
+  height: auto;
+  max-width: 600px;  /* Limita a largura máxima da imagem */
   border-radius: 8px;
   margin-bottom: 20px;
 }
@@ -63,7 +63,23 @@ body {
   color: #333;
 }
 
-/* Personalização do botão pronto */ 
+/* Estilo para os botões de "Voltar" */
+button.voltar {
+  background-color: #dc3545;  /* Cor vermelha para o botão de voltar */
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+button.voltar:hover {
+  background-color: #c82333; /* Cor de hover mais escura para o botão de voltar */
+}
+
+/* Personalização do botão "box" */
 .box {
   width: 140px;
   height: auto;

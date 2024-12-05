@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dynamic Button Interaction</title>
-  <link rel="stylesheet" href="referencia.css">
+  <link rel="stylesheet" href="testeDeStyle.css">
 </head>
 <body>
   <div class="container">
@@ -38,6 +38,345 @@
       <img id="content-image" src="../img/guideUser.png" alt="Service Image">
       <p id="content-text">Este é um guia interativo, com as algumas peças e sua função, separados por sistemas presentes na mêcanica do automóvel.</p>
     </div>
+  </div>
+
+  <!-- Botões para o sistema de MOTOR -->
+  <div id="botao-motor" class="botoes-adicionais" style="display: none;">
+    <button>Bloco do Motor</button>
+    <div id="blocoMotor" class="pecas-info" style="display: none;">
+      <p>É a "caixa" que contém os cilindros, pistões e outras partes que realizamacombustão e geram a potência necessária para o movimento do carro. Emtermossimples, é o coração do veículo. O conjunto das peças.</p>
+    </div>
+
+    <button>Cilindros</button>
+    <div id="cilindros" class="pecas-info" style="display: none;">
+      <p>São cavidades dentro do motor onde ocorre a combustão. A quantidade de cilindros pode variar de 3 a 12, dependendo do tipo de motor. Cada cilindro contém um pistão que se move para cima e para baixo para gerar a energia que move o carro.</p>
+    </div>
+
+    <button>Pistões</button>
+    <div id="pistoes" class="pecas-info" style="display: none;">
+      <p>São peças móveis que se movem dentro dos cilindros. O movimento dos pistões é causado pela explosão da mistura de combustível e ar, o que gera a força para movimentar o carro.</p>
+    </div>
+
+    <button>Válvulas</button>
+    <div id="valvulas" class="pecas-info" style="display: none;">
+      <p>As válvulas controlam a entrada de ar e combustível nos cilindros e a saída dos gases de escape. Existem válvulas de admissão (para entrar ar/combustível) e válvulas de escape (para sair os gases queimados).</p>
+    </div>
+
+    <button>Árvore de Cames</button>
+    <div id="arvoreCames" class="pecas-info" style="display: none;">
+      <p>A árvore de cames controla as válvulas, abrindo e fechando-as no momento certo para que o motor funcione corretamente. Ela é acionada pelo movimento do virabrequim.</p>
+    </div>
+
+    <button>Virabrequim</button>
+    <div id="virabrequim" class="pecas-info" style="display: none;">
+      <p>É a peça que converte o movimento dos pistões (movimento linear) em movimento rotacional, fazendo o motor funcionar e transmitindo essa energia para o restante do veículo.</p>
+    </div>
+
+    <button>Bielas</button>
+    <div id="bielas" class="pecas-info" style="display: none;">
+      <p>Conectam os pistões ao virabrequim. Elas transmitem a força do pistão para o virabrequim, transformando a energia gerada pela combustão em movimento rotacional.</p>
+    </div>
+
+    <button>Carter</button>
+    <div id="carter" class="pecas-info" style="display: none;">
+      <p>É o reservatório de óleo do motor, onde o óleo lubrificante fica armazenado. Ele também ajuda a resfriar o motor, evitando o superaquecimento.</p>
+    </div>
+
+    <button>Sistema de Arrefecimento</button>
+    <div id="arrefecimento" class="pecas-info" style="display: none;">
+      <p>O motor gera calor durante o funcionamento, e o sistema de arrefecimento é responsável por manter a temperatura do motor sob controle para evitar danos. Para mais detalhes, consulte o setor responsável pelo sistema de arrefecimento.</p>
+    </div>
+
+    <button>Alternador</button>
+    <div id="alternador" class="pecas-info" style="display: none;">
+      <p>Responsável por gerar eletricidade para carregar a bateria do carro enquanto o motor está funcionando. Ele converte a energia mecânica do motor em energia elétrica.</p>
+    </div>
+
+    <button>Velas de Ignição</button>
+    <div id="velasIgnicao" class="pecas-info" style="display: none;">
+      <p>Elas são responsáveis por acender a mistura de ar e combustível no motor. Quando a vela emite uma faísca, ela provoca a explosão necessária para mover os pistões.</p>
+    </div>
+
+    <button>Bomba de Combustível</button>
+    <div id="bombaCombustivel" class="pecas-info" style="display: none;">
+      <p>Fornece combustível ao motor, transportando-o do tanque até os injetores (nos motores modernos) ou até o carburador (nos motores mais antigos).</p>
+    </div>
+
+    <button>Voltar</button>
+  </div>
+
+  <!-- Botões para o sistema de TRANSMISSÃO -->
+  <div id="botao-transmissao" class="botoes-adicionais" style="display: none;">
+    <button>Embreagem</button>
+    <div id="embreagem" class="pecas-info" style="display: none;">
+      <p>Em carros com transmissão manual, a embreagem é um componente essencial para desacoplar o motor da transmissão, permitindo que o motorista troque as marchas sem danificar o sistema. Para mais detalhes, consulte o setor responsável pelo sistema de embreagem.</p>
+    </div>
+
+    <button>Caixa de Marchas</button>
+    <div id="caixaMarchas" class="pecas-info" style="display: none;">
+      <p>A parte central da transmissão, onde as engrenagens que controlam as diferentes marchas estão localizadas. Em transmissões manuais, o motorista seleciona as marchas manualmente. Em automáticas, o sistema controla as trocas.</p>
+    </div>
+
+    <button>Eixos e Diferenciais</button>
+    <div id="eixo" class="pecas-info" style="display: none;">
+      <p>São responsáveis por transferir o movimento gerado pela transmissão para as rodas.</p>
+    </div>
+
+    <button>Conversor de Torque</button>
+    <div id="conversorTorque" class="pecas-info" style="display: none;">
+      <p>No lugar da embreagem, as transmissões automáticas utilizam um conversor de torque, que usa fluido para transferir a potência do motor para a transmissão.</p>
+    </div>
+
+    <button>Voltar</button>
+  </div>
+
+  <!-- Botões para o sistema de EMBREAGEM -->
+  <div id="botao-embreagem" class="botoes-adicionais" style="display: none;">
+    <button>Pedal de Embreagem</button>
+    <div id="pedal" class="pecas-info" style="display: none;">
+      <p>É o componente que o motorista pisa para desacoplar o motor da transmissão. Quando o pedal é pressionado, a força é transmitida para o sistema de embreagem.</p>
+    </div>
+
+    <button>Disco de Embreagem</button>
+    <div id="discoEmbreagem" class="pecas-info" style="display: none;">
+      <p>Fica entre o volante do motor e a campana de embreagem. Quando o pedal é pressionado, ele se desengata do volante do motor, interrompendo a transferência de potência para a transmissão.</p>
+    </div>
+
+    <button>Platô ou mola de pressão</button>
+    <div id="plato" class="pecas-info" style="display: none;">
+      <p>É responsável por pressionar o disco de embreagem contra o volante do motor. Sua função é garantir que a conexão entre o motor e a transmissão seja firmemente estabelecida quando o pedal não está pressionado.</p>
+    </div>
+
+    <button>Rolamento da Embreagem</button>
+    <div id="rolamento" class="pecas-info" style="display: none;">
+      <p>Permite que o disco de embreagem se movimente suavemente quando o pedal é pressionado e facilita o acoplamento e desacoplamento.</p>
+    </div>
+
+    <button>Volante do Motor</button>
+    <div id="volanteEmbreagem" class="pecas-info" style="display: none;">
+      <p>É a parte do motor que está em contato direto com o disco de embreagem. Ele ajuda a transmitir a rotação do motor para a transmissão.</p>
+    </div>
+
+    <button>Voltar</button>
+  </div>
+
+  <!-- Botões para o sistema de SUSPENSÂO -->
+  <div id="botao-suspensao" class="botoes-adicionais" style="display: none;">
+    <button>Amortecedores</button>
+    <div id="amortecedores" class="pecas-info" style="display: none;">
+      <p>Os amortecedores ajudam a controlar o movimento das molas e reduzem os impactos e a vibração que são transmitidos para o carro. Eles trabalham em conjunto com as molas para controlar o movimento das rodas.</p>
+    </div>
+
+    <button>Molas</button>
+    <div id="molas" class="pecas-info" style="display: none;">
+      <p>As molas são responsáveis por suportar o peso do carro e absorver os impactos da estrada. Elas podem ser do tipo helicoidal (mais comuns), a lâmina (molas retas) ou outros tipos, dependendo do design do veículo.</p>
+    </div>
+
+    <button>Buchas e suportes</button>
+    <div id="bucha" class="pecas-info" style="display: none;">
+      <p>Essas peças de borracha ou outros materiais flexíveis ajudam a absorver os impactos e reduzem o atrito entre os componentes da suspensão.</p>
+    </div>
+
+    <button>Braços de controle (ou braços suspensores)</button>
+    <div id="bracoControle" class="pecas-info" style="display: none;">
+      <p>São peças que conectam as rodas ao chassi e permitem que as rodas se movam verticalmente de acordo com as irregularidades da estrada.</p>
+    </div>
+
+    <button>Barra estabilizadora</button>
+    <div id="barraEstabilizadora" class="pecas-info"style="display: none;" >
+      <p>Ajuda a reduzir o rolamento do carro nas curvas, garantindo que as rodas de um lado do carro se movam mais ou menos ao mesmo tempo que as do outro lado para manter o equilíbrio</p>
+    </div>
+
+    <button>Pivôs e terminais de direção</button>
+    <div id="terminalDirecao" class="pecas-info" style="display: none;">
+      <p>Eles conectam a suspensão ao sistema de direção, permitindo que as rodas girem com precisão quando você vira o volante.</p>
+    </div>
+
+    <button>Voltar</button>
+  </div>
+
+  <!-- Botão para o sistema de FREIOS -->
+  <div id="botao-freio" class="botoes-adicionais" style="display: none;">
+    <button>Pastilhas de Freios</button>
+    <div id="pastilhas" class="pecas-info" style="display: none;">
+      <p>São as peças que pressionam contra os discos de freio (no sistema de freio a disco) para reduzir a velocidade do veículo. Em sistemas de freio a tambor, são chamadas de sapatas de freio.</p>
+    </div>
+
+    <button>Discos de Freio</button>
+    <div id="discoFreio" class="pecas-info" style="display: none;">
+      <p>São as superfícies contra as quais as pastilhas de freio pressionam para desacelerar o veículo. Eles ficam acoplados às rodas e giram junto com elas.</p>
+    </div>
+
+    <button>Pinças de Freio</button>
+    <div id="pincas" class="pecas-info" style="display: none;">
+      <p>São as partes do sistema de freio a disco que seguram as pastilhas e as pressionam contra os discos de freio quando o pedal é acionado.</p>
+    </div>
+
+    <button>Tambor de Freio</button>
+    <div id="tambor" class="pecas-info" style="display: none;">
+      <p>Em sistemas de freio a tambor, é a peça que gira junto com a roda. As sapatas de freio pressionam contra o tambor para diminuir a velocidade.</p>
+    </div>
+
+    <button>Cilindro Mestre</button>
+    <div id="cilindroMestre" class="pecas-info" style="display: none;">
+      <p>É o componente responsável por gerar a pressão no sistema hidráulico de freio quando o motorista pressiona o pedal. Ele empurra o fluido de freio para os cilindros de roda.</p>
+    </div>
+
+    <button>Cilindro de Roda</button>
+    <div id="cilindroRoda" class="pecas-info" style="display: none;">
+      <p>Nos sistemas de freio a tambor, os cilindros de roda são responsáveis por empurrar as sapatas de freio contra o tambor. Em carros com freios a disco, o cilindro de roda é substituído pelas pinças.</p>
+    </div>
+
+    <button>Fluido de Freio</button>
+    <div id="fluido" class="pecas-info" style="display: none;">
+      <p>O fluido hidráulico transmite a pressão do cilindro mestre para as outras partes do sistema de freio, permitindo que as pastilhas ou sapatas exerçam pressão nas superfícies de frenagem.</p>
+    </div>
+
+    <button>Absorvedor de Choque</button>
+    <div id="absorvedor" class="pecas-info" style="display: none;">
+      <p>Nos sistemas de freios a disco, os pistões são movidos pela pressão do fluido para acionar as pinças de freio. Eles também ajudam a controlar a força aplicada nas pastilhas de freio.</p>
+    </div>
+
+    <button>Voltar</button>
+  </div>
+
+  <!-- Botão para o sistema de DIREÇÃO -->
+  <div id="botao-direcao" class="botoes-adicionais" style="display: none;">
+    <button>Volante</button>
+    <div id="volanteDirecao" class="pecas-info" style="display: none;">
+      <p>O volante é o componente que o motorista usa para controlar a direção do veículo. Ele está conectado ao sistema de direção e permite que o motorista faça curvas e altere a trajetória do carro.</p>
+    </div>
+
+    <button>Coluna de Direção</button>
+    <div id="colunaDirecao" class="pecas-info" style="display: none;">
+      <p> A coluna de direção conecta o volante ao mecanismo de direção (geralmente o pinhão e a cremalheira ou a caixa de direção). Ela transmite o movimento do volante para o sistema de direção.</p>
+    </div>
+
+    <button>Caixa de Direção</button>
+    <div id="caixaDirecao" class="pecas-info" style="display: none;">
+      <p>A caixa de direção é o componente que converte o movimento rotacional do volante em movimento linear, ajudando a mover as rodas do veículo. Pode ser do tipo caixa de direção de pinhão e cremalheira (mais comum) ou do tipo caixa de direção de setor e braçadeiras.</p>
+    </div>
+
+    <button>Pinhão e cremalheira</button>
+    <div id="pinhao" class="pecas-info" style="display: none;">
+      <p>O pinhão é um pequeno pinhão de engrenagem conectado ao volante, enquanto a cremalheira é uma barra dentada que se move lateralmente. O movimento do pinhão gira a cremalheira, fazendo as rodas se moverem.</p>
+    </div>
+
+    <button>Barras de Direção</button>
+    <div id="barrasDirecao" class="pecas-info" style="display: none;">
+      <p>São as barras que conectam o mecanismo de direção (caixa de direção ou cremalheira) às rodas dianteiras, transmitindo o movimento do sistema de direção para as rodas.</p>
+    </div>
+
+    <button>Braços de Direção</button>
+    <div id="bracosDirecao" class="pecas-info" style="display: none;">
+      <p>São as peças que conectam as barras de direção às rodas, ajudando a mover as rodas para a esquerda ou para a direita.</p>
+    </div>
+
+    <button>Terminais de Direção</button>
+    <div id="terminaisDirecao" class="pecas-info" style="display: none;">
+      <p>Localizados nas extremidades das barras de direção, os terminais de direção conectam as barras às rodas, permitindo que o movimento da direção seja transferido para as rodas de forma eficiente.</p>
+    </div> 
+    <button>Voltar</button> 
+  </div>
+
+  <!-- Botão para o sistema de ARREFECIMENTO -->
+  <div id="botao-arrefecimento" class="botoes-adicionais" style="display: none;">
+    <button>Radiador</button>
+    <div id="radiador" class="pecas-info" style="display: none;">
+      <p>O radiador é o componente que dissipa o calor do fluido de arrefecimento. Ele é responsável por resfriar o fluido de arrefecimento quente, enviando-o de volta ao motor para continuar o ciclo de arrefecimento.</p>
+    </div>
+
+    <button>Bomba d'água</button>
+    <div id="bombadagua" class="pecas-info" style="display: none;">
+      <p>A bomba d'água é responsável por circular o fluido de arrefecimento através do motor e do radiador. Ela mantém o fluido em movimento, ajudando a transferir o calor do motor para o radiador.</p>
+    </div>
+
+    <button>Termostato</button>
+    <div id="termostato" class="pecas-info" style="display: none;">
+      <p>O termostato regula a temperatura do motor controlando o fluxo do fluido de arrefecimento. Quando o motor atinge a temperatura ideal de funcionamento, o termostato se abre, permitindo que o fluido circule. Se a temperatura estiver baixa, o termostato fica fechado, evitando o fluxo do fluido para o radiador.</p>
+    </div>
+
+    <button>Mangueiras de Arrefecimento</button>
+    <div id="mangueira" class="pecas-info" style="display: none;">
+      <p>São as mangueiras que conectam os diversos componentes do sistema de arrefecimento, permitindo o fluxo do fluido de arrefecimento entre o motor, o radiador e a bomba d'água.</p>
+    </div>
+
+    <button>Válvula de Alívio de Pressão</button>
+    <div id="valvulaAlivio" class="pecas-info" style="display: none;">
+      <p>Localizada no radiador ou na tampa do radiador, essa válvula permite que o sistema de arrefecimento libere o excesso de pressão, evitando que o sistema se danifique.</p>
+    </div>
+
+    <button>Ventoinha de Arrefecimento</button>
+    <div id="ventoinha" class="pecas-info" style="display: none;">
+      <p>A ventoinha ajuda a reduzir a temperatura do fluido de arrefecimento no radiador, especialmente quando o carro está parado ou em baixa velocidade. Ela é ativada automaticamente quando a temperatura do motor sobe demais.</p>
+    </div>
+
+    <button>Reservatório de Expansão</button>
+    <div id="reservatorio" class="pecas-info" style="display: none;">
+      <p>É o local onde o fluido de arrefecimento excedente é armazenado quando o sistema de arrefecimento esquenta. Ele permite que o fluido se expanda e se contraia à medida que a temperatura muda, sem causar vazamentos ou danos ao sistema.</p>
+    </div>
+
+    <button>Fluido de Arrefecimento (Anticongelante)</button>
+    <div id="fluidoArrefecimento" class="pecas-info" style="display: none;">
+      <p>O fluido de arrefecimento, também conhecido como anticongelante, circula pelo sistema para absorver o calor do motor e transferi-lo para o radiador. Ele também ajuda a prevenir o congelamento do motor em temperaturas baixas e evita a corrosão dos componentes do sistema de arrefecimento.</p>
+    </div>
+
+    <button>Voltar</button>
+  </div>
+
+  <!-- Botão para o sistema ELÉTRICO -->
+  <div id="botao-eletrico" class="botoes-adicionais" style="display: none;">
+    <button>Bateria</button>
+    <div id="bateria" class="pecas-info" style="display: none;">
+      <p>A bateria armazena a energia elétrica e fornece a energia necessária para iniciar o motor, além de alimentar os componentes elétricos quando o motor está desligado. Ela é responsável por fornecer a energia para a partida e para sistemas como luzes, rádio, etc.</p>
+    </div>
+
+    <button>Alternador</button>
+    <div id="alternadorEletrico" class="pecas-info" style="display: none;">
+      <p>O alternador é um gerador de eletricidade que carrega a bateria enquanto o motor está funcionando e alimenta os sistemas elétricos do carro (como luzes e sistemas de infotainment). Ele converte a energia mecânica do motor em energia elétrica.</p>
+    </div>
+
+    <button>Motor de Arranque</button>
+    <div id="mtorArranque" class="pecas-info" style="display: none;">
+      <p>O motor de arranque é um motor elétrico responsável por iniciar o motor do carro. Ele gira o motor de combustão interna para que ele comece a funcionar.</p>
+    </div>
+
+    <button>Fusíveis e relés</button>
+    <div id="fusiveis" class="pecas-info" style="display: none;">
+      <p>Os fusíveis protegem os circuitos elétricos de sobrecarga ou curto-circuito, interrompendo o fluxo de eletricidade quando necessário. Relés são interruptores elétricos que controlam o fluxo de corrente para componentes específicos, como faróis ou bombas de combustível.</p>
+    </div>
+
+    <button>Distribuidor de Energia</button>
+    <div id="distribuidor" class="pecas-info" style="display: none;">
+      <p>É um painel que organiza e distribui a energia elétrica para diferentes circuitos do carro. Contém fusíveis e, em alguns casos, disjuntores para proteger os sistemas elétricos..</p>
+    </div>
+
+    <button>Cabos e Fios</button>
+    <div id="cabos" class="pecas-info" style="display: none;">
+      <p>Os cabos e fios conectam todos os componentes elétricos entre si, transmitindo a corrente elétrica entre a bateria, alternador, motor de arranque, sensores, atuadores e outros sistemas.</p>
+    </div>
+
+    <button>Painel de Instrumentos</button>
+    <div id="painel" class="pecas-info" style="display: none;">
+      <p>O painel de instrumentos exibe informações importantes sobre o funcionamento do carro, como nível de combustível, temperatura do motor, velocidade, rotação do motor (RPM), voltagem da bateria e outros sinais relacionados aos sistemas elétricos do veículo.</p>
+    </div>
+
+    <button>Sensores e Atuadores</button>
+    <div id="sensores" class="pecas-info" style="display: none;">
+      <p>Sensores monitoram as condições do veículo e transmitem essas informações para o sistema de controle eletrônico, como a ECU (Unidade de Controle do Motor). Atuadores, por sua vez, executam ações com base nessas informações, como ajustar o combustível ou controlar sistemas de emissões.</p>
+    </div>
+
+    <button>Unidade de Controle Eletrônico (ECU)</button>
+    <div id="ecu" class="pecas-info" style="display: none;">
+      <p>A ECU é o "cérebro" do sistema eletrônico do carro, controlando uma variedade de sistemas, incluindo o motor, os freios (em sistemas ABS), a transmissão, e sistemas de segurança. Ela recebe dados dos sensores e ajusta o funcionamento de vários componentes do veículo.</p>
+    </div>
+
+    <button>Luzes e Faróis</button>
+    <div id="luzes" class="pecas-info" style="display: none;">
+      <p>O sistema elétrico também alimenta as luzes internas e externas do veículo, como faróis, lanternas, luzes de freio, indicadores de direção, e luzes internas, garantindo a visibilidade e segurança.</p>
+    </div>
+
+    <button>Voltar</button>
   </div>
   <script src="referencia.js"></script>
 </body>
