@@ -154,13 +154,19 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 2;
 }
 
-/* Conteúdo do cabeçalho */
 .container {
     text-align: center;
     color: white;
     padding: 20px;
+    z-index: 3;
+    position: relative;
+}
+
+.container h1 {
+    color: white;
 }
 
 /* Título */
@@ -211,7 +217,49 @@ body {
 /* Cabeçalho fim */
 
 /* FAQs inicio */
+/* PERGUNTAS FREQUENTES */
+.faq-container { /* Alterado de .container para .faq-container */
+    width: 70%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), 0 0 10px rgba(0, 0, 0, 0.329); 
+    border-radius: 8px;
+}
+h1 {
+    text-align: center;
+    color: #333;
+    padding-bottom: 15px;
+}
+.faq-item {
+    margin-bottom: 10px;
+}
+.faq-question {
+    background-color: rgb(216, 19, 36);
+    color: #fff;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: left;
+    width: 100%;
+}
+.faq-answer {
+    display: none;
+    color: black;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border-left: 3px solid rgb(216, 19, 36);
+    border-right: 3px solid rgb(216, 19, 36);
+}
+.faq-question:hover {
+    background-color: rgb(165, 14, 27);
+}
+/* PERGUNTAS FREQUENTES FIM */
 
+/* BOX PERGUNTAS */
 .colunas {
     display: flex; 
     flex-wrap: wrap; 
@@ -219,6 +267,7 @@ body {
     align-items: center;
     justify-content: center;
     padding-top: 25px;
+    padding-bottom: 25px;
 }
 
 .box {

@@ -48,6 +48,82 @@
     <!-- Cabeçalho fim -->
 
     <!-- Conteúdo FAQs inicio -->
+    <!-- PERGUNTAS FREQUENTES -->
+    <!-- PERGUNTAS MAIS FREQUENTES -->
+    <div class="faq-container"> <!-- Alterado de "container" para "faq-container" -->
+        <h1>Perguntas Frequentes sobre Mecânica de Automóveis</h1>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(1)">Como funciona o motor de um carro?</div>
+            <div class="faq-answer" id="answer1">
+                O motor de um carro converte combustível em energia para movimentar o veículo através de combustão interna. O combustível é misturado com ar e inflamado pelas velas de ignição, gerando energia para mover os pistões.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(2)">O que é a correia dentada e por que ela é importante?</div>
+            <div class="faq-answer" id="answer2">
+                A correia dentada sincroniza o movimento das válvulas com os pistões no motor. Se ela se romper, pode causar danos graves ao motor. Deve ser trocada regularmente conforme a recomendação do fabricante.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(3)">Qual é a função da bateria de um carro?</div>
+            <div class="faq-answer" id="answer3">
+                A bateria fornece energia elétrica para dar partida no motor e alimentar os sistemas elétricos do carro, como luzes, rádio e ar-condicionado, quando o motor não está em funcionamento.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(4)">Quando devo trocar o óleo do motor?</div>
+            <div class="faq-answer" id="answer4">
+                O óleo do motor deve ser trocado regularmente para lubrificar as peças móveis e evitar o desgaste do motor. A troca geralmente é recomendada a cada 5.000 a 10.000 km, dependendo do tipo de óleo e das especificações do fabricante.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(5)">O que é o sistema de suspensão e qual é sua função?</div>
+            <div class="faq-answer" id="answer5">
+                O sistema de suspensão mantém os pneus em contato com o solo, proporcionando conforto e estabilidade. Ele também ajuda a absorver impactos de buracos e ondulações na estrada.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(6)">O que é o sistema de transmissão e como ele funciona?</div>
+            <div class="faq-answer" id="answer6">
+                A transmissão é responsável por transferir a potência do motor para as rodas. Ela pode ser manual (o motorista troca as marchas) ou automática (as marchas são trocadas automaticamente).
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(7)">Como verificar o nível de fluido de freio?</div>
+            <div class="faq-answer" id="answer7">
+                O fluido de freio deve ser verificado no reservatório localizado no compartimento do motor. O nível ideal deve estar entre as marcas "mínimo" e "máximo". Se necessário, adicione o fluido recomendado.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(8)">Como saber quando preciso substituir os pneus?</div>
+            <div class="faq-answer" id="answer8">
+                Os pneus devem ser substituídos quando a profundidade do sulco for inferior a 1,6 mm ou se houver danos visíveis, como cortes ou bolhas. Também é importante verificar a data de fabricação, pois os pneus têm uma vida útil limitada.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(9)">O que fazer se o carro superaquecer?</div>
+            <div class="faq-answer" id="answer9">
+                Se o carro superaquecer, pare imediatamente, desligue o motor e deixe o carro esfriar. Verifique o nível do fluido do radiador e procure por vazamentos. Nunca abra o radiador enquanto o motor estiver quente para evitar queimaduras.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(10)">O que é o sistema de arrefecimento e por que é importante?</div>
+            <div class="faq-answer" id="answer10">
+                O sistema de arrefecimento mantém o motor na temperatura ideal, evitando o superaquecimento. Ele é composto por componentes como o radiador, bomba d'água e termostato.
+            </div>
+        </div>
+    </div>
+
     <!-- Box de perguntas -->
     <div class="colunas">
         <div class="box">
@@ -257,11 +333,6 @@
                                 <i class="fas fa-reply" aria-hidden="true"></i>
                             </span>
                         </span>
-                        <span class="level-item" aria-label="retweet">
-                            <span class="icon">
-                                <i class="fas fa-retweet" aria-hidden="true"></i>
-                            </span>
-                        </span>
                         <span class="level-item like-icon" aria-label="like">
                             <span class="icon">
                                 <i class="fas fa-heart" aria-hidden="true"></i>
@@ -308,6 +379,8 @@
 
     <!-- Botão para voltar no topo -->
     <a href="#" class="voltaTopo" id="voltaTopo">↑</a>
+
+    <script src="./js/faqs.js"></script>
 
     <!-- Biblioteca de JS Font Awesome-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/js/all.min.js" integrity="sha512-1JkMy1LR9bTo3psH+H4SV5bO2dFylgOy+UJhMus1zF4VEFuZVu5lsi4I6iIndE4N9p01z1554ZDcvMSjMaqCBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
