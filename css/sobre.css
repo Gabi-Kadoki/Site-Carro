@@ -7,6 +7,7 @@
 
 body {
     font-family: Inter, SF Pro, Segoe UI, Roboto, Oxygen, Ubuntu, Helvetica Neue, Helvetica, Arial, sans-serif;
+    background-color: rgb(20, 22, 26);
 }
 
 /* Loading page inicio */
@@ -255,6 +256,10 @@ body {
     color: rgb(216, 19, 36);
 }
 
+.sobre-text strong {
+    color: #bbbbbb;
+}
+
 .subheading {
     color: rgb(216, 19, 36);
     text-transform: uppercase;
@@ -265,11 +270,13 @@ body {
 h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
+    color: rgb(171, 177, 191);
 }
 
 p {
     font-size: 1rem;
     margin-bottom: 20px;
+    color: rgb(171, 177, 191);
 }
 
 /* Lista de itens */
@@ -289,12 +296,12 @@ p {
 .item-text h6 {
     font-size: 1.1rem;
     margin-bottom: 5px;
-    color: #333;
+    color: rgb(165, 14, 27);;
 }
 
 .item-text span {
     font-size: 0.9rem;
-    color: #6c757d;
+    color: rgb(171, 177, 191);;
 }
 
 .arrow {
@@ -367,19 +374,19 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(216, 19, 36); /* Adicione um pouco de transparência para ver o ícone */
+    background: rgba(216, 19, 36);
     opacity: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.7s ease, transform 0.5s ease; /* Adicione a transição de transformação de volta */
-    transform: scale(0); /* Começa com escala 0 */
+    transition: opacity 0.7s ease, transform 0.5s ease;
+    transform: scale(0);
     gap: 5px;
 }
 
 .team-member:hover .team-overlay {
     opacity: 1;
-    transform: scale(1); /* Aumenta a escala para 1 ao passar o mouse */
+    transform: scale(1); 
 }
 
 /* Estilo do botão rede sociais */
@@ -427,8 +434,6 @@ p {
     font-size: 14px;
     color: #777;
 }
-
-
 /* Sobre fim */
 
 

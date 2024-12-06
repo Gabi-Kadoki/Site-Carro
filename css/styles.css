@@ -212,6 +212,19 @@ body {
 
 /* Cabeçalho fim */
 
+/* Apenas a parte da lista */
+ul {
+    list-style-type: circle;
+    color: black;
+}
+ul li::marker {
+    color: #fff;
+}
+
+ul li {
+    color: rgb(171, 177, 191); 
+}
+
 /* Botão Clique Aqui para ir para o guia inicio */
 .btn-conteiner {
     display: flex;
