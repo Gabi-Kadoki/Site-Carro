@@ -6,6 +6,7 @@
 
 body {
     font-family: Inter, SF Pro, Segoe UI, Roboto, Oxygen, Ubuntu, Helvetica Neue, Helvetica, Arial, sans-serif;
+    background-color: #14161a;
 }
 
 /* Loading page inicio */
@@ -215,7 +216,6 @@ body {
 /* Apenas a parte da lista */
 ul {
     list-style-type: circle;
-    color: black;
 }
 ul li::marker {
     color: #fff;
@@ -228,7 +228,7 @@ ul li {
 /* Botão Clique Aqui para ir para o guia inicio */
 .btn-conteiner {
     display: flex;
-    justify-content: justify;
+    justify-content: center;
     --color-text: #ffffff;
     --color-background: rgb(216, 19, 36);
     --color-outline: #AD0F1D;
