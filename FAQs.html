@@ -11,13 +11,6 @@
 </head>
 
 <body>
-    <!-- Icone de Loading inicio -->
-    <!--<div id="loading-screen" class="loading-screen">
-        <div class="spinner"></div>
-    </div> -->  
-    <!-- É necessário com o JavaScrip para removê-lo assim que o conteúdo for totalmente carregado -->
-    <!-- Icone de Loading fim -->
-
     <!-- Navbar inicio -->
     <nav class="navbar">
         <a href="index.html" class="navbar-brand">
@@ -49,8 +42,7 @@
 
     <!-- Conteúdo FAQs inicio -->
     <!-- PERGUNTAS FREQUENTES -->
-    <!-- PERGUNTAS MAIS FREQUENTES -->
-    <div class="faq-container"> <!-- Alterado de "container" para "faq-container" -->
+    <div class="faq-container"> 
         <h1>Perguntas Frequentes sobre Mecânica de Automóveis</h1>
 
         <div class="faq-item">
@@ -124,8 +116,8 @@
         </div>
     </div>
 
-    <!-- Box de perguntas -->
-    <div class="colunas">
+    <!-- Caixa de perguntas -->
+    <div class="colunas" id="perguntaExibida" style="display: none;">
         <div class="box">
             <div class="media-left">
                 <img src="https://bulma.io/assets/images/placeholders/128x128.png" alt="Image" />
@@ -133,12 +125,10 @@
             <div class="media-content">
                 <div class="content">
                     <p>
-                        <strong>John Smith</strong> <small>@johnsmith</small>
-                        <small>31m</small>
+                        <strong id="nomeUsuario">John Smith</strong>
+                        <small id="timePosted"></small> <!-- O tempo será atualizado aqui -->
                         <br />
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                        efficitur sit amet massa fringilla egestas. Nullam condimentum luctus
-                        turpis.
+                        <span id="perguntaTexto">Lorem ipsum dolor sit amet...</span>
                     </p>
                 </div>
                 <nav class="level">
@@ -148,205 +138,55 @@
                                 <i class="fas fa-reply" aria-hidden="true"></i>
                             </span>
                         </span>
-                        <span class="level-item" aria-label="retweet">
-                            <span class="icon">
-                                <i class="fas fa-retweet" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                        <span class="level-item like-icon" aria-label="like">
+                        <span class="level-item like-icon" aria-label="like" id="likeIcon">
                             <span class="icon">
                                 <i class="fas fa-heart" aria-hidden="true"></i>
                             </span>
                         </span>
+                        <span id="likeCount" class="level-item">0</span> <!-- Contador de likes -->
                     </div>
                 </nav>
-            </div>
-        </div>
-    
-        <div class="box">
-            <div class="media-left">
-                <img src="https://bulma.io/assets/images/placeholders/128x128.png" alt="Image" />
-            </div>
-            <div class="media-content">
-                <div class="content">
-                    <p>
-                        <strong>John Smith</strong> <small>@johnsmith</small>
-                        <small>31m</small>
-                        <br />
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                        efficitur sit amet massa fringilla egestas. Nullam condimentum luctus
-                        turpis.
-                    </p>
+                <!-- Caixa de input de resposta (inicialmente oculta) -->
+                <div class="textInputWrapper">
+                    <textarea class="textInput" placeholder="Type your text" required=""></textarea>
+                    <button class="sendBtn">Enviar Resposta</button> <!-- Botão de envio -->
                 </div>
-                <nav class="level">
-                    <div class="level-left">
-                        <span class="level-item" aria-label="reply">
-                            <span class="icon">
-                                <i class="fas fa-reply" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                        <span class="level-item" aria-label="retweet">
-                            <span class="icon">
-                                <i class="fas fa-retweet" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                        <span class="level-item like-icon" aria-label="like">
-                            <span class="icon">
-                                <i class="fas fa-heart" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    
-        <div class="box">
-            <div class="media-left">
-                <img src="https://bulma.io/assets/images/placeholders/128x128.png" alt="Image" />
-            </div>
-            <div class="media-content">
-                <div class="content">
-                    <p>
-                        <strong>John Smith</strong> <small>@johnsmith</small>
-                        <small>31m</small>
-                        <br />
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                        efficitur sit amet massa fringilla egestas. Nullam condimentum luctus
-                        turpis.
-                    </p>
-                </div>
-                <nav class="level">
-                    <div class="level-left">
-                        <span class="level-item" aria-label="reply">
-                            <span class="icon">
-                                <i class="fas fa-reply" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                        <span class="level-item" aria-label="retweet">
-                            <span class="icon">
-                                <i class="fas fa-retweet" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                        <span class="level-item like-icon" aria-label="like">
-                            <span class="icon">
-                                <i class="fas fa-heart" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    
-        <div class="box">
-            <div class="media-left">
-                <img src="https://bulma.io/assets/images/placeholders/128x128.png" alt="Image" />
-            </div>
-            <div class="media-content">
-                <div class="content">
-                    <p>
-                        <strong>John Smith</strong> <small>@johnsmith</small>
-                        <small>31m</small>
-                        <br />
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                        efficitur sit amet massa fringilla egestas. Nullam condimentum luctus
-                        turpis.
-                    </p>
-                </div>
-                <nav class="level">
-                    <div class="level-left">
-                        <span class="level-item" aria-label="reply">
-                            <span class="icon">
-                                <i class="fas fa-reply" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                        <span class="level-item" aria-label="retweet">
-                            <span class="icon">
-                                <i class="fas fa-retweet" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                        <span class="level-item like-icon" aria-label="like">
-                            <span class="icon">
-                                <i class="fas fa-heart" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    
-        <div class="box">
-            <div class="media-left">
-                <img src="https://bulma.io/assets/images/placeholders/128x128.png" alt="Image" />
-            </div>
-            <div class="media-content">
-                <div class="content">
-                    <p>
-                        <strong>John Smith</strong> <small>@johnsmith</small>
-                        <small>31m</small>
-                        <br />
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                        efficitur sit amet massa fringilla egestas. Nullam condimentum luctus
-                        turpis.
-                    </p>
-                </div>
-                <nav class="level">
-                    <div class="level-left">
-                        <span class="level-item" aria-label="reply">
-                            <span class="icon">
-                                <i class="fas fa-reply" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                        <span class="level-item" aria-label="retweet">
-                            <span class="icon">
-                                <i class="fas fa-retweet" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                        <span class="level-item like-icon" aria-label="like">
-                            <span class="icon">
-                                <i class="fas fa-heart" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    
-        <div class="box">
-            <div class="media-left">
-                <img src="https://bulma.io/assets/images/placeholders/128x128.png" alt="Image" />
-            </div>
-            <div class="media-content">
-                <div class="content">
-                    <p>
-                        <strong>John Smith</strong> <small>@johnsmith</small>
-                        <small>31m</small>
-                        <br />
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-                        efficitur sit amet massa fringilla egestas. Nullam condimentum luctus
-                        turpis.
-                    </p>
-                </div>
-                <nav class="level">
-                    <div class="level-left">
-                        <span class="level-item" aria-label="reply">
-                            <span class="icon">
-                                <i class="fas fa-reply" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                        <span class="level-item like-icon" aria-label="like">
-                            <span class="icon">
-                                <i class="fas fa-heart" aria-hidden="true"></i>
-                            </span>
-                        </span>
-                    </div>
-                </nav>
             </div>
         </div>
     </div>
-
-   
-    <!-- Conteúdp FAQs fim -->
-
+    
+    <!-- Seção de Pergunta -->
+    <section class="secao-pergunta">
+        <div class="container-pergunta">
+            <div class="colunas-centralizadas">
+                <h2 class="titulo-pergunta">Ainda não achou a resposta para sua dúvida?</h2>
+                <p class="subtitulo-pergunta">Manda aqui a sua pergunta que alguém da comunidade irá te ajudar.</p>
+            
+                <!-- Formulário para enviar pergunta -->
+                <form id="form-pergunta" class="form-pergunta">
+                    <!-- Campo para Identificação (Nome ou Apelido) -->
+                    <div class="campo-identificacao">
+                        <label class="label-identificacao">Seu Nome ou Apelido</label>
+                        <div class="controle-identificacao">
+                            <input class="input-identificacao" id="input-identificacao" type="text" placeholder="Digite seu nome ou apelido" required />
+                        </div>
+                    </div>
+                
+                    <!-- Campo para enviar pergunta -->
+                    <div class="campo-pergunta">
+                        <label class="label-pergunta">Sua Pergunta</label>
+                        <div class="controle-pergunta">
+                            <textarea class="texto-pergunta" id="input-pergunta" placeholder="Digite sua pergunta aqui..." required></textarea>
+                        </div>
+                    </div>
+                
+                    <div class="controle-enviar">
+                        <button type="submit" class="botao-enviar">Enviar Pergunta</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer Start -->
     <div class="footer-container">

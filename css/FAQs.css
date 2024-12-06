@@ -222,14 +222,14 @@ body {
 .faq-container { /* Alterado de .container para .faq-container */
     width: 70%;
     margin: 20px auto;
-    background-color: #fff;
+    background-color: #1f2229;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(199, 199, 199, 0.3), 0 0 10px rgba(43, 43, 43, 0.15); 
     border-radius: 8px;
 }
 h1 {
     text-align: center;
-    color: #333;
+    color: #f8f8f8;
     padding-bottom: 15px;
 }
 .faq-item {
@@ -265,10 +265,11 @@ h1 {
     display: flex; 
     flex-wrap: wrap; 
     gap: 20px; 
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start; 
+    justify-content: center; 
     padding-top: 25px;
     padding-bottom: 25px;
+    width: 100%; 
 }
 
 .box {
@@ -329,9 +330,242 @@ h1 {
     color: #e0245e; 
 }
 
+.liked {
+    color:#e0245e;
+}
+
 .icon {
     font-size: 1.2em; 
-} 
+}
+
+/* Caixa de resposta */
+.textInputWrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 12px;
+    display: none;
+}
+
+.textInputWrapper:before {
+    content: "";
+    left: 0;
+    right: 0;
+    position: absolute;
+    pointer-events: none;
+    bottom: -1px;
+    z-index: 4;
+    width: 100%;
+}
+
+.textInputWrapper:focus-within .textInput {
+    border-bottom: 1px solid rgb(216, 19, 36);
+}
+
+.textInputWrapper .textInput {
+    border-radius: 5px 5px 0px 0px;
+    box-shadow: 4px 4px 12px rgba(128, 139, 154, 0.3);
+    max-height: 100px; 
+    min-height: 36px; 
+    background-color: #14161a;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 200ms;
+    transition-property: background-color;
+    color: #e8e8e8;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px;
+    width: 100%;
+    border-left: none;
+    border-bottom: none;
+    border-right: none;
+    resize: vertical; 
+    overflow-y: auto; 
+    white-space: pre-wrap; 
+    word-wrap: break-word; 
+}
+
+/* Não aplicar o estilo de borda vermelha ao botão */
+.textInputWrapper .sendBtn {
+    margin-top: 10px;
+    background-color: rgb(216, 19, 36);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.textInputWrapper .sendBtn:hover {
+    background-color: rgb(165, 14, 27);
+}
+
+.textInputWrapper .textInput:focus,
+.textInputWrapper .textInput:active {
+    outline: none;
+}
+
+.textInputWrapper:focus-within .textInput,
+.textInputWrapper .textInput:focus,
+.textInputWrapper .textInput:active {
+    background-color: #14161a;
+}
+
+.textInputWrapper:focus-within .textInput::placeholder {
+    opacity: 0;
+}
+
+/* Garantir que o botão de envio não receba a borda vermelha */
+.textInputWrapper .sendBtn:focus {
+    outline: none; 
+}
+
+/* Seção de Pergunta */
+.secao-pergunta {
+    padding: 2rem 1.5rem;
+    background-color: #14161a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh; 
+}
+
+.container-pergunta {
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+}
+
+.titulo-pergunta {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: rgb(216, 19, 36);
+}
+
+.subtitulo-pergunta {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: rgb(171, 177, 191);
+}
+
+.form-pergunta {
+    width: 100%;
+}
+
+/* Campo de Identificação */
+.campo-identificacao {
+    margin-bottom: 20px;
+}
+
+.label-identificacao {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #bbbbbb;
+}
+
+.controle-identificacao {
+    width: 100%;
+}
+
+.input-identificacao {
+    width: 100%;
+    background-color: #14161a;
+    color: #e8e8e8;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.input-identificacao:focus {
+    outline: none;
+    background-color: #1f2229;
+    border: 1px solid rgb(216, 19, 36);
+}
+
+/* Campo de Pergunta */
+.campo-pergunta {
+    margin-bottom: 20px;
+}
+
+.label-pergunta {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #bbbbbb;
+}
+
+.controle-pergunta {
+    width: 100%;
+}
+
+.texto-pergunta {
+    width: 100%;
+    min-height: 100px;
+    background-color: #14161a;
+    color: #e8e8e8;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    transition: background-color 0.3s ease;
+}
+
+.texto-pergunta:focus {
+    outline: none;
+    background-color: #1f2229;
+    border: 1px solid rgb(216, 19, 36);
+}
+
+/* Botão de Envio */
+.botao-enviar {
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(216, 19, 36);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.botao-enviar:hover {
+    background-color: rgb(165, 14, 27);
+}
+
+.controle-enviar {
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .titulo-pergunta {
+        font-size: 1.4rem;
+    }
+
+    .subtitulo-pergunta {
+        font-size: 0.9rem;
+    }
+
+    .texto-pergunta {
+        min-height: 80px; 
+    }
+
+    .botao-enviar {
+        font-size: 0.9rem;
+    }
+
+    .input-identificacao {
+        font-size: 14px; 
+    }
+}
 /* FAQs fim */
 
 
