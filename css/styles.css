@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura e altura */
+    box-sizing: border-box;
 }
 
 body {
@@ -48,7 +48,7 @@ body {
     background-color: transparent;
     border: none;
     font-size: 30px;
-    display: none; /* Escondido por padrão em telas grandes */
+    display: none; 
 }
 
 /* Links de Navegação */
@@ -401,8 +401,8 @@ ul li {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 15px;  /* Definindo a largura */
-    height: 15px; /* Definindo a altura */
+    width: 15px;  
+    height: 15px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s, transform 0.3s ease-in-out;
 }
@@ -423,8 +423,8 @@ ul li {
 
 @media (max-width: 768px) { 
     .car-parts-functions { 
-        flex-direction: column; /* Coloca as colunas em uma única linha */
-        gap: 20px; /* Diminui o espaçamento entre as seções */
+        flex-direction: column; 
+        gap: 20px; 
     }
 }
 
