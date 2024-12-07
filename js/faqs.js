@@ -1,3 +1,10 @@
+// Funcionamento da página de loading
+var loader = document.getElementById("preloader");
+
+window.addEventListener("load", function() {
+    loader.style.display = "none";
+});
+
 // Função para alternar a visibilidade da resposta
 function toggleAnswer(questionNumber) {
     const answer = document.getElementById('answer' + questionNumber);
