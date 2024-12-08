@@ -323,3 +323,13 @@ body {
 .voltaTopo:active {
     transform: scale(0.9);
 }
+
+/* Funcionalidade de loading */
+#preloader{
+    background: #14161a url(./img/loading_circulo.gif) no-repeat center center;
+    background-size: 30%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 99999999;
+}

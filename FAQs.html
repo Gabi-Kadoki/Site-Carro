@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Prático de Carros</title>
+    <link rel="shortcut icon" href="./img/iconeNavegador.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/FAQs.css">
+    <!-- Biblioteca Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1QFLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Navbar inicio -->
+    <nav class="navbar">
+        <a href="index.html" class="navbar-brand">
+            <h2><i class="fa fa-car" style="margin-right: 10px;"></i> Guia Prático de Carros</h2>
+        </a>
+        <button class="navbar-toggler" onclick="toggleMenu()">&#9776;</button>
+        <div class="navbar-links" id="navbar-links">
+            <a href="index.html" class="nav-item"><span>Início</span></a>
+            <a href="sobre.html" class="nav-item">Sobre</a>
+            <a href="guia.html" class="nav-item">Guia</a>
+            <a href="FAQs.html" class="nav-item">FAQs</a>
+        </div>
+    </nav>
+    <!-- Navbar fim -->
+
+    <!-- Cabeçalho inicio -->
+    <div class="header">
+        <div class="header-inner">
+            <div class="container">
+                <h1 class="title">PERGUNTAS FREQUENTES</h1>
+                <nav class="breadcrumb">
+                    <span><a href="./index.html" class="inicio">Início</a></span>
+                    <a href="atual">FAQs</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- Cabeçalho fim -->
+
+    <!-- Conteúdo FAQs inicio -->
+    <div class="faq-container">
+        <h1>Perguntas Frequentes sobre Mecânica de Automóveis</h1>
+
+        <!-- Aqui as perguntas fixas do FAQ -->
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(1)">Como funciona o motor de um carro?</div>
+            <div class="faq-answer" id="answer1">
+                O motor de um carro converte combustível em energia para movimentar o veículo através de combustão interna. O combustível é misturado com ar e inflamado pelas velas de ignição, gerando energia para mover os pistões.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(2)">O que é a correia dentada e por que ela é importante?</div>
+            <div class="faq-answer" id="answer2">
+                A correia dentada sincroniza o movimento das válvulas com os pistões no motor. Se ela se romper, pode causar danos graves ao motor. Deve ser trocada regularmente conforme a recomendação do fabricante.
+            </div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(2)">O que é a correia dentada e por que ela é importante?</div>
+            <div class="faq-answer" id="answer2">
+                A correia dentada sincroniza o movimento das válvulas com os pistões no motor. Se ela se romper, pode causar danos graves ao motor. Deve ser trocada regularmente conforme a recomendação do fabricante.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(3)">Qual é a função da bateria de um carro?</div>
+            <div class="faq-answer" id="answer3">
+                A bateria fornece energia elétrica para dar partida no motor e alimentar os sistemas elétricos do carro, como luzes, rádio e ar-condicionado, quando o motor não está em funcionamento.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(4)">Quando devo trocar o óleo do motor?</div>
+            <div class="faq-answer" id="answer4">
+                O óleo do motor deve ser trocado regularmente para lubrificar as peças móveis e evitar o desgaste do motor. A troca geralmente é recomendada a cada 5.000 a 10.000 km, dependendo do tipo de óleo e das especificações do fabricante.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(5)">O que é o sistema de suspensão e qual é sua função?</div>
+            <div class="faq-answer" id="answer5">
+                O sistema de suspensão mantém os pneus em contato com o solo, proporcionando conforto e estabilidade. Ele também ajuda a absorver impactos de buracos e ondulações na estrada.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(6)">O que é o sistema de transmissão e como ele funciona?</div>
+            <div class="faq-answer" id="answer6">
+                A transmissão é responsável por transferir a potência do motor para as rodas. Ela pode ser manual (o motorista troca as marchas) ou automática (as marchas são trocadas automaticamente).
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(7)">Como verificar o nível de fluido de freio?</div>
+            <div class="faq-answer" id="answer7">
+                O fluido de freio deve ser verificado no reservatório localizado no compartimento do motor. O nível ideal deve estar entre as marcas "mínimo" e "máximo". Se necessário, adicione o fluido recomendado.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(8)">Como saber quando preciso substituir os pneus?</div>
+            <div class="faq-answer" id="answer8">
+                Os pneus devem ser substituídos quando a profundidade do sulco for inferior a 1,6 mm ou se houver danos visíveis, como cortes ou bolhas. Também é importante verificar a data de fabricação, pois os pneus têm uma vida útil limitada.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(9)">O que fazer se o carro superaquecer?</div>
+            <div class="faq-answer" id="answer9">
+                Se o carro superaquecer, pare imediatamente, desligue o motor e deixe o carro esfriar. Verifique o nível do fluido do radiador e procure por vazamentos. Nunca abra o radiador enquanto o motor estiver quente para evitar queimaduras.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(10)">O que é o sistema de arrefecimento e por que é importante?</div>
+            <div class="faq-answer" id="answer10">
+                O sistema de arrefecimento mantém o motor na temperatura ideal, evitando o superaquecimento. Ele é composto por componentes como o radiador, bomba d'água e termostato.
+            </div>
+        </div>
+        <!-- Outras perguntas FAQ podem ser adicionadas aqui... -->
+
+    </div>
+
+    <!-- Seção de Dúvidas da Comunidade -->
+    <div class="comunidade-container">
+        <h1>Dúvidas da Comunidade</h1>
+        <div id="comunidade-questions">
+            <!-- As perguntas da comunidade serão inseridas aqui via JS -->
+        </div>
+    </div>
+
+    <!-- Seção de Pergunta -->
+    <section class="secao-pergunta">
+        <div class="container-pergunta">
+            <div class="colunas-centralizadas">
+                <h2 class="titulo-pergunta">Ainda não achou a resposta para sua dúvida?</h2>
+                <p class="subtitulo-pergunta">Manda aqui a sua pergunta que alguém da comunidade irá te ajudar.</p>
+
+                <!-- Formulário para enviar pergunta -->
+                <form id="form-pergunta" class="form-pergunta">
+                    <div class="campo-identificacao">
+                        <label class="label-identificacao">Seu Nome ou Apelido</label>
+                        <div class="controle-identificacao">
+                            <input class="input-identificacao" id="input-identificacao" type="text" placeholder="Digite seu nome ou apelido" required />
+                        </div>
+                    </div>
+
+                    <div class="campo-pergunta">
+                        <label class="label-pergunta">Sua Pergunta</label>
+                        <div class="controle-pergunta">
+                            <textarea class="texto-pergunta" id="input-pergunta" placeholder="Digite sua pergunta aqui..." required></textarea>
+                        </div>
+                    </div>
+
+                    <div class="controle-enviar">
+                        <button type="submit" class="botao-enviar">Enviar Pergunta</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Start -->
+    <div class="footer-container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Equipe</h4>
+                <p>Gabriel Capodeferro</p>
+                <p>Gabriela Kadoki</p>
+                <p>Ian da Silva</p>
+                <p>Isabela Izidorio</p>
+                <p>Wendell Fossen</p>
+            </div>
+            <div class="footer-section">
+                <h4>Projeto de aula</h4>
+                <h6>BRADWEB</h6>
+                <p>Lecionada por Ana Paula Giancoli</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="copyright">
+                &copy; <a href="#">Guia Prático de Carros</a>, All Right Reserved.
+                <br>
+                Design por Gabriel, Gabriela e Isabela
+                <br>
+                Back-End por Ian, Isabela e Wendell
+            </div>
+        </div>
+    </div>    
+    <!-- Footer End -->
+
+    <!-- Botão para voltar no topo -->
+    <a href="#" class="voltaTopo" id="voltaTopo">↑</a>
+
+    <!-- Scripts JS -->
+    <script src="./js/faqs.js"></script> <!-- Arquivo JS com as funcionalidades -->
+    <script>
+        // Função que adiciona uma nova pergunta da comunidade
+        document.getElementById('form-pergunta').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const nome = document.getElementById('input-identificacao').value;
+            const perguntaTexto = document.getElementById('input-pergunta').value;
+            const timestamp = new Date().toISOString();
+
+            // Adiciona a nova pergunta na seção da comunidade
+            addComment({
+                text: perguntaTexto,
+                timestamp: timestamp,
+                user: nome
+            });
+
+            // Limpa os campos após o envio
+            document.getElementById('input-identificacao').value = '';
+            document.getElementById('input-pergunta').value = '';
+        });
+    </script>
+    
+    <!-- Loading -->
+    <div id="preloader"></div>
+    <script src="./js/faqs.js"></script>
+
+    <!-- Biblioteca de JS Font Awesome-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/js/all.min.js" integrity="sha512-1JkMy1LR9bTo3psH+H4SV5bO2dFylgOy+UJhMus1zF4VEFuZVu5lsi4I6iIndE4N9p01z1554ZDcvMSjMaqCBQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
