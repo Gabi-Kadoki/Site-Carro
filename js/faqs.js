@@ -1,5 +1,3 @@
-
-
 function toggleAnswer(id) {
     const answer = document.getElementById(`answer${id}`);
     if (answer.style.display === "none" || !answer.style.display) {
@@ -39,7 +37,7 @@ function addComment({ text, timestamp, user, parentElement = null }) {
                     </div>
                 </nav>
                 <div class="textInputWrapper" style="display: none;">
-                    <input class="textInputName" type="text" placeholder="Seu nome ou apelido" required />
+                    <textarea class="textInputName" placeholder="Seu nome..." required></textarea>
                     <textarea class="textInput" placeholder="Digite sua resposta aqui..." required></textarea>
                     <button class="sendBtn">Enviar Resposta</button>
                 </div>
