@@ -28,7 +28,7 @@
     <!-- Cabeçalho inicio -->
     <div class="header">
         <div class="header-inner">
-            <div class="container">
+            <div class="head-container">
                 <h1 class="title">Guia</h1>
                 <nav class="breadcrumb">
                     <a href="./index.html" class="inicio">Início</a>
@@ -41,55 +41,248 @@
     </div>
     <!-- Cabeçalho fim -->
 
-    <!-- Container para os botões fixos no topo -->
-    <div class="side-buttons">
-       <button class="sistemas">Sistema de Propulsão</button>
-        <button class="sistemas">MOTOR</button>
-        <p>A maioria dos carros utiliza motores a gasolina, diesel ou flex, que geram energia através da queima de combustível no interior dos cilindros.</p>
-        <img src="" alt=""><!--imagem -->
-        <button class="sistemas">TRANSMISSÃO</button> <!-- clicar no motor para aparecer essa parte-->
-        <p> Responsável por transmitir a potência do motor para as rodas. Pode ser manual, automática</p>
-        <img src="" alt=""><!--imagem -->
-        <button class="sistemas">EMBREAGEM</button> <!-- clicar na transmissao para aparecer essa parte-->
-        <p>Localizada no primeiro pedal da esquerda a embreagem conecta e desconecta o motor da transmissão, permitindo a troca de marchas de forma suave.</p>
-        <img src="" alt=""><!--imagem -->
-        
-        <button class="sistemas">SISTEMA DE SUSPENSÃO</button>
-        <button class="sistemas">Amortecedores e Molas</button><!-- clicar na suspencao para aparecer essa parte-->
-        <p>Absorvem impactos e mantêm o carro estável, proporcionando conforto e controle durante a condução.</p>
-        <img src="" alt=""><!--imagem -->
-        
-        <button class="sistemas">SISTEMA DE FREIOS</button>
-        <button class="sistemas">Discos e Pastilhas de Freio</button>
-        <p>Reduzem a velocidade do veículo através do atrito, travando a roda</p>
-        <img src="" alt=""><!--imagem -->
-        <button class="sistemas">ABS (Sistema de Antibloqueio de Freios)</button>
-        <p>Impede que as rodas travem durante a frenagem, mantendo o controle direcional.</p>
-        <img src="" alt=""><!--imagem -->
-        <button class="sistemas">Freio de Estacionamento</button>
-        <img src="" alt=""><!--imagem -->
-        
-        <button class="sistemas">SISTEMA DE DIREÇÃO</button>
-        <button class="sistemas">Volante</button>
-        <p>Controla a direcao do veiculo</p>
-        <img src="" alt=""><!--imagem -->
-        
-        
-        <button class="sistemas">SISTEMA DE ARREFECIMENTO</button>
-        <button class="sistemas">Radiador</button>
-        <p>Localizado na frente do veiculo o radiador dissipa o calor do motor, com o a velocidade do vento, para evitar que ele superaqueça.</p>
-        <img src="" alt=""><!--imagem -->
-
-        
-        <button class="sistemas">SISTEMA ELÉTRICO</button>
-        <button class="sistemas">Bateria</button>
-        <p>Fornece energia elétrica para o carro quando o motor não está em funcionamento</p>
-        <img src="" alt=""><!--imagem -->
-
-    </div>
-
-    <!-- Explicação -->
-    
+    <main>
+        <div class="wrapper">
+            <div class="container">
+                <div class="sidebar">
+                  <button onclick="updateContent('motor')">
+                    <span class="box">sistema do MOTOR</span>
+                  </button>
+                  <button onclick="updateContent('transmissao')">
+                    <span class="box">Sistema deTRANSMISSÂO</span>
+                  </button>
+                  <button onclick="updateContent('embreagem')">
+                    <span class="box">sistema de EMBREAGEM</span>
+                  </button>
+                  <button onclick="updateContent('suspensao')">
+                    <span class="box">SISTEMA DE SUSPENSÃO</span>
+                  </button>
+                  <button onclick="updateContent('freios')">
+                    <span class="box">SISTEMA DE FREIOS</span>
+                  </button>
+                  <button onclick="updateContent('direcao')">
+                    <span class="box">SISTEMA DE DIREÇÃO</span>
+                  </button>
+                  <button onclick="updateContent('arrefecimento')">
+                    <span class="box">SISTEMA DE ARREFECIMENTO</span>
+                  </button>
+                  <button onclick="updateContent('eletrico')">
+                    <span class="box">SISTEMA ELÉTRICO</span>
+                  </button>
+                </div>
+                <div class="content">
+                    <img id="content-image" src="../img/guideUser.png" alt="Service Image">
+                    <p id="content-text">Este é um guia interativo, com as algumas peças e sua função, separados por sistemas presentes na mêcanica do automóvel.</p>
+                    <!-- Botões das peças -->
+                    <div class="downbar" id="downbar">
+                        <!-- Botões para o sistema de MOTOR -->
+                        <div id="botao-motor" class="botoes-adicionais" style="display: none;">
+                            <button onclick="togglePecaInfo('blocoMotor')">Bloco do Motor</button>
+                            <div id="blocoMotor" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('cilindros')">Cilindros</button>
+                            <div id="cilindros" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('pistoes')">Pistões</button>
+                            <div id="pistoes" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('valvulas')">Válvulas</button>
+                            <div id="valvulas" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('arvoreCames')">Árvore de Cames</button>
+                            <div id="arvoreCames" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('virabrequim')">Virabrequim</button>
+                            <div id="virabrequim" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('bielas')">Bielas</button>
+                            <div id="bielas" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('carter')">Carter</button>
+                            <div id="carter" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('arrefecimento')">Sistema de Arrefecimento</button>
+                            <div id="arrefecimento" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('alternador')">Alternador</button>
+                            <div id="alternador" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('velasIgnicao')">Velas de Ignição</button>
+                            <div id="velasIgnicao" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('bombaCombustivel')">Bomba de Combustível</button>
+                            <div id="bombaCombustivel" class="pecas-info" style="display: none;"></div>
+                        </div>
+                    
+                        <!-- Botões para o sistema de TRANSMISSÃO -->
+                        <div id="botao-transmissao" class="botoes-adicionais" style="display: none;">
+                            <button onclick="togglePecaInfo('embreagem')">Embreagem</button>
+                            <div id="embreagem" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('caixaMarchas')">Caixa de Marchas</button>
+                            <div id="caixaMarchas" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('eixo')">Eixos e Diferenciais</button>
+                            <div id="eixo" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('conversorTorque')">Conversor de Torque</button>
+                            <div id="conversorTorque" class="pecas-info" style="display: none;"></div>
+                        </div>
+                    
+                        <!-- Botões para o sistema de EMBREAGEM -->
+                        <div id="botao-embreagem" class="botoes-adicionais" style="display: none;">
+                            <button onclick="togglePecaInfo('pedal')">Pedal de Embreagem</button>
+                            <div id="pedal" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('discoEmbreagem')">Disco de Embreagem</button>
+                            <div id="discoEmbreagem" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('plato')">Platô ou mola de pressão</button>
+                            <div id="plato" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('rolamento')">Rolamento da Embreagem</button>
+                            <div id="rolamento" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('volanteEmbreagem')">Volante do Motor</button>
+                            <div id="volanteEmbreagem" class="pecas-info" style="display: none;"></div>
+                        </div>
+                    
+                        <!-- Botões para o sistema de SUSPENSÂO -->
+                            <div id="botao-suspensao" class="botoes-adicionais" style="display: none;">
+                            <button onclick="togglePecaInfo('amortecedores')">Amortecedores</button>
+                            <div id="amortecedores" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('molas')">Molas</button>
+                            <div id="molas" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('bucha')">Buchas e suportes</button>
+                            <div id="bucha" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('bracoControle')">Braços de controle (ou braços suspensores)</button>
+                            <div id="bracoControle" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('barraEstabilizadora')">Barra estabilizadora</button>
+                            <div id="barraEstabilizadora" class="pecas-info" style="display: none;"> </div>
+                            
+                            <button onclick="togglePecaInfo('terminalDirecao')">Pivôs e terminais de direção</button>
+                            <div id="pivoTerminal" class="pecas-info" style="display: none;"></div>
+                        </div>
+                    
+                        <!-- Botão para o sistema de FREIOS -->
+                        <div id="botao-freio" class="botoes-adicionais" style="display: none;">
+                            <button onclick="togglePecaInfo('pastilhas')">Pastilhas de Freios</button>
+                            <div id="pastilhas" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('discoFreio')">Discos de Freio</button>
+                            <div id="discoFreio" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('pincas')">Pinças de Freio</button>
+                            <div id="pincas" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('tambor')">Tambor de Freio</button>
+                            <div id="tambor" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('cilindroMestre')">Cilindro Mestre</button>
+                            <div id="cilindroMestre" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('cilindroRoda')">Cilindro de Roda</button>
+                            <div id="cilindroRoda" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('fluido')">Fluido de Freio</button>
+                            <div id="fluido" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('absorvedor')">Absorvedor de Choque</button>
+                            <div id="absorvedor" class="pecas-info" style="display: none;"></div>
+                        </div>
+                    
+                        <!-- Botão para o sistema de DIREÇÃO -->
+                        <div id="botao-direcao" class="botoes-adicionais" style="display: none;">
+                            <button onclick="togglePecaInfo('volanteDirecao')">Volante</button>
+                            <div id="volanteDirecao" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('colunaDirecao')">Coluna de Direção</button>
+                            <div id="colunaDirecao" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('caixaDirecao')">Caixa de Direção</button>
+                            <div id="caixaDirecao" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('pinhao')">Pinhão e cremalheira</button>
+                            <div id="pinhao" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('barrasDirecao')">Barras de Direção</button>
+                            <div id="barrasDirecao" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('bracosDirecao')">Braços de Direção</button>
+                            <div id="bracosDirecao" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('terminaisDirecao')">Terminais de Direção</button>
+                            <div id="terminaisDirecao" class="pecas-info" style="display: none;"></div>
+                        </div>
+                    
+                        <!-- Botão para o sistema de ARREFECIMENTO -->
+                        <div id="botao-arrefecimento" class="botoes-adicionais" style="display: none;">
+                            <button onclick="togglePecaInfo('radiador')">Radiador</button>
+                            <div id="radiador" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('bombadagua')">Bomba d'água</button>
+                            <div id="bombadagua" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('termostato')">Termostato</button>
+                            <div id="termostato" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('mangueira')">Mangueiras de Arrefecimento</button>
+                            <div id="mangueira" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('valvulaAlivio')">Válvula de Alívio de Pressão</button>
+                            <div id="valvulaAlivio" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('ventoinha')">Ventoinha de Arrefecimento</button>
+                            <div id="ventoinha" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('reservatorio')">Reservatório de Expansão</button>
+                            <div id="reservatorio" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('fluidoArrefecimento')">Fluido de Arrefecimento (Anticongelante)</button>
+                            <div id="fluidoArrefecimento" class="pecas-info" style="display: none;"></div>
+                        </div>
+                    
+                        <!-- Botão para o sistema ELÉTRICO -->
+                        <div id="botao-eletrico" class="botoes-adicionais" style="display: none;">
+                            <button onclick="togglePecaInfo('bateria')">Bateria</button>
+                            <div id="bateria" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('alternadorEletrico')">Alternador</button>
+                            <div id="alternadorEletrico" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('motorArranque')">Motor de Arranque</button>
+                            <div id="motorArranque" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('fusiveis')">Fusíveis e relés</button>
+                            <div id="fusiveis" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('distribuidor')">Distribuidor de Energia</button>
+                            <div id="distribuidor" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('cabos')">Cabos e Fios</button>
+                            <div id="cabos" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('painel')">Painel de Instrumentos</button>
+                            <div id="painel" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('sensores')">Sensores e Atuadores</button>
+                            <div id="sensores" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('ecu')">Unidade de Controle Eletrônico (ECU)</button>
+                            <div id="ecu" class="pecas-info" style="display: none;"></div>
+                            
+                            <button onclick="togglePecaInfo('luzes')">Luzes e Faróis</button>
+                            <div id="luzes" class="pecas-info" style="display: none;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <!-- Footer Start -->
     <div class="footer-container">
@@ -125,7 +318,7 @@
 
     <!-- Página de loading -->
     <div id="preloader"></div>
-
+    
     <script src="./js/guia.js"></script>
 
     <!-- Biblioteca de JS Font Awesome-->

@@ -1,350 +1,485 @@
+/* Reset para garantir uma base limpa */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura e altura */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Corpo da página */
 body {
-    font-family: Inter, SF Pro, Segoe UI, Roboto, Oxygen, Ubuntu, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #262626;
 }
-
-/* Loading page inicio */
-.spinner {
-    background-image: linear-gradient(rgb(216, 19, 36) 35%,#13D8C7);
-    width: 100px;
-    height: 100px;
-    animation: spinning82341 1.7s linear infinite;
-    text-align: center;
-    border-radius: 50px;
-    filter: blur(1px);
-    box-shadow: 0px -5px 20px 0px rgb(216, 19, 36), 0px 5px 20px 0px #13D8C7;
-}
-  
-.spinner1 {
-    background-color: rgb(36, 36, 36);
-    width: 100px;
-    height: 100px;
-    border-radius: 50px;
-    filter: blur(10px);
-}
-  
-@keyframes spinning82341 {
-    to {
-        transform: rotate(360deg);
-    }
-}
-/* Loading page fim */
 
 /* Navbar Básica */
 .navbar-links a span {
-    color: rgb(216, 19, 36);
+  color: rgb(216, 19, 36);
 }
 .navbar {
-    background-color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
 }
 
 /* Marca */
 .navbar-brand {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .navbar-brand h2 {
-    font-size: 1.8rem;
-    color: rgb(216, 19, 36);
-    display: flex;
-    align-items: center;
-    margin: 0;
+  font-size: 1.8rem;
+  color: rgb(216, 19, 36);
+  display: flex;
+  align-items: center;
+  margin: 0;
 }
 
 .navbar-brand i {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 /* Botão do Menu (para mobile) */
 .navbar-toggler {
-    background-color: transparent;
-    border: none;
-    font-size: 30px;
-    display: none; /* Escondido por padrão em telas grandes */
+  background-color: transparent;
+  border: none;
+  font-size: 30px;
+  display: none; /* Escondido por padrão em telas grandes */
 }
 
 /* Links de Navegação */
 .navbar-links {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .nav-item {
-    margin: 0 15px;
-    font-size: 1rem;
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s ease;
+  margin: 0 15px;
+  font-size: 1rem;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .nav-item:hover {
-    color: rgb(216, 19, 36);
+  color: rgb(216, 19, 36);
 }
 
 /* Menu Responsivo */
 @media (max-width: 768px) {
-    .navbar-links {
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100vh;
-        background-color: white;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: left 0.3s ease;
-    }
+  .navbar-links {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.3s ease;
+  }
 
-    .navbar-links.active {
-        left: 0;
-    }
+  .navbar-links.active {
+    left: 0;
+  }
 
-    .navbar-toggler {
-        display: block;
-    }
+  .navbar-toggler {
+    display: block;
+  }
 
-    .nav-item {
-        margin: 20px 0;
-        font-size: 1.2rem;
-    }
-
-    .dropdown-menu {
-        position: static;
-        box-shadow: none;
-        margin-top: 10px;
-    }
+  .nav-item {
+    margin: 20px 0;
+    font-size: 1.2rem;
+  }
 }
 
 /* Cabeçalho principal */
 .header {
-    background-image: url('../img/capa.jpg');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  background-image: url('../img/capa.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
 /* Sobreposição semitransparente sobre a imagem */
 .header-inner {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* A sobreposição semitransparente */
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); 
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Conteúdo do cabeçalho */
-.container {
-    text-align: center;
-    color: white;
-    padding: 20px;
+.head-container {
+  text-align: center;
+  color: white;
+  padding: 20px;
 }
 
 /* Título */
 .title {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: white;
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: white;
 }
 
 /* Navegação (breadcrumb) */
 .breadcrumb {
-    display: inline-block;
-    padding: 0;
-    margin: 0;
-    font-size: 1rem;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
 }
 
 /* Estilo para os links */
 .breadcrumb a {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 /* Cor do link "Início" */
 .breadcrumb .inicio {
-    color: rgb(216, 19, 36);
+  color: rgb(216, 19, 36);
 }
 
 .breadcrumb .atual {
-    color: white;
+  color: white;
 }
 
 .breadcrumb a::after {
-    content: " |"; 
-    margin-left: 10px;
-    margin-right: 5px;
-    color: white;
+  content: " |"; 
+  margin-left: 10px;
+  margin-right: 5px;
+  color: white;
 }
 
 .breadcrumb a:last-child::after {
-    content: ""; /
+  content: "";
 }
 
+/* Responsividade para o título */
 @media (max-width: 768px) {
-    .title {
-        font-size: 2rem;
-    }
+  .title {
+      font-size: 2rem;
+  }
 }
-/* Cabeçalho fim */
 
-/* Guia início */
-
-/* Guia fim */
-
-/* Footer inicio*/
 /* Estilos principais para o footer */
 .footer-container {
-    background-color: #1f2229;
-    color: #fff;
-    padding: 40px 20px;
-    padding-top: 15px;
-    padding-bottom: 10px;
-    font-family: 'Arial', sans-serif;
+  background-color: #1f2229;
+  color: #fff;
+  padding: 40px 20px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-family: 'Arial', sans-serif;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    gap: 40px;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 20px;
 }
 
 .footer-section {
-    width: 45%;
-    padding-left: 60px;
-    padding-right: 60px;
+  width: 45%;
+  padding-left: 60px;
+  padding-right: 60px;
 }
 
 .footer-section h4 {
-    font-size: 1.4em;
-    margin-bottom: 10px;
-    color: rgb(216, 19, 36);
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  color: rgb(216, 19, 36);
 }
 
 .footer-section p, .footer-section h6 {
-    font-size: 1.1em;
-    margin: 5px 0;
+  font-size: 1.1em;
+  margin: 5px 0;
 }
 
 .footer-section h6 {
-    font-weight: bold;
-    color: rgb(216, 19, 36);
+  font-weight: bold;
+  color: rgb(216, 19, 36);
 }
 
 .footer-bottom {
-    text-align: center;
-    font-size: 0.9em;
-    border-top: 1px solid rgb(171, 177, 191);
-    padding-top: 20px;
+  text-align: center;
+  font-size: 0.9em;
+  border-top: 1px solid rgb(171, 177, 191);
+  padding-top: 20px;
 }
 
 .footer-bottom a {
-    color: rgb(216, 19, 36);
-    text-decoration: none;
+  color: rgb(216, 19, 36);
+  text-decoration: none;
 }
 
 .footer-bottom a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .copyright {
-    margin-top: 10px;
-    font-size: 1em;
+  margin-top: 10px;
+  font-size: 1em;
 }
 
 @media (max-width: 768px) {
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-section {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    .footer-bottom {
-        padding-top: 30px;
-    }
-}
-/* Footer fim */
-
-/* Estilo do botão de voltar ao topo */
-.voltaTopo {
-    text-decoration: none;
-    position: fixed;
-    bottom: 40px; 
-    right: 40px;  
-    background-color: rgb(216, 19, 36); 
-    color: white;
-    border: none;
-    padding: 15px;
-    font-size: 24px;
-    cursor: pointer;
-    display: none; 
-    justify-content: center;
+  .footer-content {
+    flex-direction: column;
     align-items: center;
-    width: 15px;
-    height: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-    transition: background-color 0.3s, transform 0.3s ease-in-out; 
+  }
+
+  .footer-section {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-bottom {
+    padding-top: 30px;
+  }
 }
 
-/* Estilo do botão quando estiver em hover */
+/* Estilo do botão Voltar ao Topo */
+.voltaTopo {
+  text-decoration: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: rgb(216, 19, 36);
+  color: white;
+  border: none;
+  padding: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15px;
+  height: 15px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s ease-in-out;
+}
+
 .voltaTopo:hover {
-    background-color: rgb(170, 0, 15); 
-    transform: scale(1.1);
+  background-color: rgb(216, 19, 36);
+  transform: scale(1.1);
 }
 
-/* Estilo do botão quando pressionado */
 .voltaTopo:active {
-    transform: scale(0.9);
-}
-
-/* Classe para mostrar o botão quando necessário */
-.show {
-    display: flex;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .voltaTopo {
-        padding: 12px;
-        font-size: 20px;
-    }
+  transform: scale(0.9);
 }
 
 /* Funcionalidade de loading */
-#preloader{
-    background: #14161a url(./img/loading_circulo.gif) no-repeat center center;
-    background-size: 30%;
-    height: 100vh;
-    width: 100%;
-    position: fixed;
-    z-index: 99999999;
+#preloader {
+  background: #14161a url(./img/loading_circulo.gif) no-repeat center center;
+  background-size: 30%;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 99999999;
+}
+
+/* Estilo dos elementos da guia e sidebar já fornecidos */
+/* Wrapper para centralizar o .container */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Container */
+.container {
+  display: flex;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #ffffff;
+  border-radius: 8px;
+  width: 1000px;
+  min-width: 1000px;
+  min-height: max-content;
+}
+
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: #FFF;
+  color: white;
+  border-radius: 8px 0 0 8px;
+}
+
+.sidebar button {
+  background: rgb(216, 19, 36);
+  border: none;
+  color: white;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.sidebar button:hover {
+  background: #AD0F1D;
+}
+
+/* Estilos para o botão */
+.sidebar button:active,
+.downbar button:active,
+.box:active {
+  background: rgb(171, 177, 191);
+  color: #14161a;
+}
+
+.sidebar button:focus,
+.downbar button:focus,
+.box:focus {
+  background: rgb(171, 177, 191);
+  color: #14161a;
+  outline: none;
+}
+
+/* Conteúdo */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+#content-image {
+  width: auto; 
+  height: 300px; 
+  max-width: 600px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  object-fit: contain; 
+}
+
+#content-text {
+  font-size: 18px;
+  color: #333;
+  text-align: justify;
+  justify-content: center;
+}
+
+.downbar {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  background: #FFF;
+  color: white;
+  border-radius: 8px 0 0 8px;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+}
+
+.downbar button {
+  background: #14161a;
+  border: none;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.downbar button:hover {
+  background: rgb(216, 19, 36);
+}
+
+/* Personalização do botão "box" */
+.box {
+  width: auto;
+  min-width: 140px;
+  height: auto;
+  float: left;
+  transition: .5s linear;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  margin: 0 5px;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.box:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+.box:after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+.box:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.box:hover:before {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .3s;
+}
+
+.box:hover:after {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: .3s transform linear, .3s height linear .5s;
+}
+
+button {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  outline: none;
+  border: none;
 }
