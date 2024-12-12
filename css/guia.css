@@ -294,34 +294,49 @@ body {
 }
 /* Footer fim */
 
-/* Estilo do botão Voltar ao Topo */
+/* Estilo do botão de voltar ao topo */
 .voltaTopo {
     text-decoration: none;
     position: fixed;
-    bottom: 40px;
-    right: 40px;
-    background-color: rgb(216, 19, 36);
+    bottom: 40px; 
+    right: 40px;  
+    background-color: rgb(216, 19, 36); 
     color: white;
     border: none;
     padding: 15px;
     font-size: 24px;
     cursor: pointer;
-    display: flex;
+    display: none; 
     justify-content: center;
     align-items: center;
     width: 15px;
-    height: 15px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, transform 0.3s ease-in-out;
+    height: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s, transform 0.3s ease-in-out; 
 }
 
+/* Estilo do botão quando estiver em hover */
 .voltaTopo:hover {
-    background-color: rgb(216, 19, 36);
+    background-color: rgb(170, 0, 15); 
     transform: scale(1.1);
 }
 
+/* Estilo do botão quando pressionado */
 .voltaTopo:active {
     transform: scale(0.9);
+}
+
+/* Classe para mostrar o botão quando necessário */
+.show {
+    display: flex;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .voltaTopo {
+        padding: 12px;
+        font-size: 20px;
+    }
 }
 
 /* Funcionalidade de loading */
