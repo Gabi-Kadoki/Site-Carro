@@ -483,3 +483,47 @@ button {
   outline: none;
   border: none;
 }
+
+/* Responsividade */
+@media (max-width: 768px) {
+  /* Wrapper e Container */
+  .wrapper {
+    padding: 0;
+  }
+
+  .container {
+    flex-direction: column; 
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    flex: 0 0 100%; 
+    border-radius: 8px; 
+    margin-bottom: 20px;
+  }
+
+  /* Conteúdo */
+  .content {
+    flex: 0 0 100%;
+    padding: 10px;
+  }
+
+  /* Downbar */
+  .downbar {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  /* Imagem e Texto */
+  #content-image {
+    width: 100%; 
+    height: auto;
+  }
+
+  /* Ajuste do tamanho do texto */
+  #content-text {
+    font-size: 16px;
+  }
+}
