@@ -55,6 +55,69 @@
                 </p>
             </div>
         </section>
+        <style>
+            /* Responsividade para o header */
+            @media (max-width: 768px) {
+                /* Ajustar o título */
+                header h1 {
+                    font-size: 2.5em; /* Diminuir o tamanho do título */
+                    padding-top: 100px; /* Ajustar o espaço superior */
+                }
+            
+                /* Ajustar o parágrafo */
+                header p {
+                    font-size: 1.1em; /* Diminuir o tamanho da fonte */
+                    max-width: 100%; /* Garantir que o parágrafo ocupe toda a largura disponível */
+                    margin: 10px auto; /* Ajustar a margem */
+                }
+            
+                /* Ajustar a área de texto */
+                header section {
+                    padding: 20px; /* Reduzir o padding */
+                    gap: 15px; /* Ajustar o gap entre os elementos */
+                }
+            
+                /* Ajustar as divs internas */
+                header section div {
+                    flex: 1 1 100%; /* Tornar as divs flexíveis e ocupando toda a largura disponível */
+                    max-width: none; /* Remover a restrição de largura máxima */
+                }
+            
+                /* Reduzir o tamanho do texto nas divs */
+                header section div p {
+                    font-size: 1em; /* Diminuir o tamanho do texto */
+                }
+            }
+            
+            /* Responsividade para telas muito pequenas (por exemplo, celulares em modo retrato) */
+            @media (max-width: 480px) {
+                /* Ajustar ainda mais o título */
+                header h1 {
+                    font-size: 2rem; /* Ajustar o título para telas menores */
+                }
+            
+                /* Ajustar o parágrafo para telas pequenas */
+                header p {
+                    font-size: 1em; /* Ajustar o tamanho do parágrafo */
+                }
+            
+                /* Ajustar a sobreposição escura para telas pequenas */
+                header div {
+                    padding-top: 100px; /* Ajustar o padding superior */
+                }
+            
+                /* Ajustar o layout das divs internas */
+                header section {
+                    padding: 15px; /* Reduzir o padding */
+                }
+            
+                /* Garantir que as divs internas ocupem toda a largura */
+                header section div {
+                    max-width: 100%; /* Remover a largura máxima */
+                    padding: 10px; /* Ajustar o padding das divs internas */
+                }
+            }
+        </style>
     </header>    
     <!-- Cabeçalho fim -->
 
