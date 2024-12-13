@@ -7,7 +7,6 @@ function toggleAnswer(id) {
     }
 }
 
-
 // Função para adicionar comentário ou resposta
 function addComment({ text, timestamp, user, parentElement = null }) {
     const commentBox = document.createElement('div');
@@ -98,7 +97,6 @@ window.addEventListener("load", function() {
 });
 
 //Funcionamento botão volta topo
-
 // Obtém o botão
 const botaoVoltarTopo = document.querySelector('.voltaTopo');
 
