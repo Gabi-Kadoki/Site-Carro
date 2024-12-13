@@ -382,27 +382,39 @@ function adjustSidebarHeight(category) {
   sidebarRight.style.overflowY = requiredHeight > maxHeight ? "scroll" : "visible";
 }
 
-// Função para aplicar a classe 'active' ao botão clicado
+// Função para aplicar a classe 'selected' ao item clicado e garantir que outros fiquem cinzas
+function handleBoxClick(event) {
+  // Remove a classe 'selected' de todos os .box
+  document.querySelectorAll('.box').forEach(box => {
+    box.classList.remove('selected');
+  });
+
+  // Adiciona a classe 'selected' ao box clicado, mantendo a cor cinza
+  event.currentTarget.classList.add('selected');
+}
+
+// Função para gerenciar a classe 'active' nos botões
 function handleButtonClick(event) {
   // Remove a classe 'active' de todos os botões
-  document.querySelectorAll('.sidebar button, .downbar button, .box').forEach(button => {
+  document.querySelectorAll('.sidebar button').forEach(button => {
     button.classList.remove('active');
   });
+
   // Adiciona a classe 'active' ao botão clicado
   event.currentTarget.classList.add('active');
 }
-
-// Adiciona o evento de clique para todos os botões no downbar
-document.querySelectorAll('.downbar button').forEach(button => {
-  button.addEventListener('click', handleButtonClick);
-});
 
 // Adiciona o evento de clique para todos os botões na sidebar
 document.querySelectorAll('.sidebar button').forEach(button => {
   button.addEventListener('click', handleButtonClick);
 });
 
-// Adiciona o evento de clique para os outros botões (como 'box' ou qualquer outro)
-document.querySelectorAll('.box').forEach(button => {
+// Adiciona o evento de clique para todos os botões no downbar
+document.querySelectorAll('.downbar button').forEach(button => {
   button.addEventListener('click', handleButtonClick);
+});
+
+// Adiciona o evento de clique para todos os sistemas (com a classe 'box')
+document.querySelectorAll('.box').forEach(box => {
+  box.addEventListener('click', handleBoxClick);
 });

@@ -340,22 +340,36 @@ body {
   transition: background 0.3s;
 }
 
+
+/* Efeito de hover no botão da sidebar */
 .sidebar button:hover {
   background: #AD0F1D;
 }
 
-/* Estilos para o botão */
-.sidebar button:active,
-.downbar button:active,
-.box:active {
-  background: rgb(171, 177, 191);
+/* Mudança no botão da sidebar quando estiver ativo (clicado) */
+.sidebar button.active {
+  background: rgb(171, 177, 191); 
   color: #14161a;
 }
 
+/* Mudança no box quando estiver selecionado (clicado) */
+.box.selected {
+  background: rgb(171, 177, 191); 
+}
+
+/* Estilos para o botão e box em estado de "active" */
+.sidebar button:active,
+.downbar button:active,
+.box:active {
+  background: rgb(171, 177, 191);  
+  color: #14161a;
+}
+
+/* Estilo de foco no botão e no box */
 .sidebar button:focus,
 .downbar button:focus,
 .box:focus {
-  background: rgb(171, 177, 191);
+  background: rgb(171, 177, 191); 
   color: #14161a;
   outline: none;
 }
@@ -475,6 +489,8 @@ body {
   transform: translateX(0);
   transition: .3s transform linear, .3s height linear .5s;
 }
+
+
 
 button {
   color: black;
