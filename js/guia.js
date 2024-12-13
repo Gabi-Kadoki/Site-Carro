@@ -197,7 +197,7 @@ const contentData = {
             },
             fluido: {
                 text: "O fluido hidráulico transmite a pressão do cilindro mestre para as outras partes do sistema de freio, permitindo que as pastilhas ou sapatas exerçam pressão nas superfícies defrenagem.",
-                image: "../img/pecas/sistema-freio/fluido.png"
+                image: "../img/pecas/sistema-freio/fluidoFreio.jpg"
             },
             absorvedor: {
                 text: "Nos sistemas de freios a disco, os pistões são movidos pela pressão do fluido para acionar as pinças de freio. Eles também ajudam a controlar a força aplicada nas pastilhas defreio.",

@@ -395,7 +395,7 @@ body {
   width: auto; 
   height: 300px; 
   max-width: 600px;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   margin-bottom: 20px;
   object-fit: contain; 
 }
@@ -542,6 +542,7 @@ button {
   #content-image {
     width: 100%; 
     height: auto;
+    border-radius: 8px;
   }
 
   /* Ajuste do tamanho do texto */
